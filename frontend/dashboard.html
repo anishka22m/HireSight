@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Trends Dashboard — HireSight</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .dashboard-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .dashboard-filters {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: .45rem 1rem;
+      border-radius: 100px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--muted);
+      border: 1.5px solid var(--border);
+      background: white;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+    .filter-btn:hover:not(.active) {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* Stat strip */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-strip-card {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .stat-strip-icon {
+      width: 46px; height: 46px;
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .stat-strip-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-strip-lbl { font-size: .78rem; color: var(--muted); margin-top: .2rem; }
+
+    /* Chart grid */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .chart-card { padding: 1.75rem; }
+    .chart-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .chart-card-header h3 { font-size: 1rem; margin: 0; }
+    .chart-wrap { position: relative; }
+
+    .chart-full { grid-column: 1 / -1; }
+
+    /* Emerging + industry */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .bottom-card { padding: 1.75rem; }
+
+    /* Industry badges */
+    .industry-list { display: flex; flex-direction: column; gap: .6rem; }
+    .industry-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .industry-label { font-size: .88rem; font-weight: 600; width: 130px; flex-shrink: 0; }
+    .industry-bar-wrap { flex: 1; }
+    .industry-pct { font-size: .82rem; color: var(--muted); width: 36px; text-align: right; }
+
+    @media (max-width: 960px) {
+      .stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .chart-grid { grid-template-columns: 1fr; }
+      .bottom-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .stat-strip { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="upload.html" class="btn btn-primary">Analyze Resume</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label anim-fade-down">Live Market Intelligence</div>
+    <h1 class="anim-fade-up delay-1">Skill Trends Dashboard</h1>
+    <p class="anim-fade-up delay-2" style="margin-top:.75rem;">Real-time demand data from 50,000+ job postings across the tech industry.</p>
+  </div>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+
+    <!-- Header row -->
+    <div class="dashboard-header-row anim-fade-up">
+      <div>
+        <h2 style="font-size:1.2rem;margin-bottom:.3rem;">Market Overview</h2>
+        <p style="font-size:.85rem;">Updated Feb 2026 · Data Roles</p>
+      </div>
+      <div class="dashboard-filters">
+        <button class="filter-btn active">All Roles</button>
+        <button class="filter-btn">Data Analyst</button>
+        <button class="filter-btn">Data Engineer</button>
+        <button class="filter-btn">ML Engineer</button>
+        <button class="filter-btn">Last 6 Months</button>
+      </div>
+    </div>
+
+    <!-- Stat strip -->
+    <div class="stat-strip stagger">
+      <div class="card stat-strip-card">
+        <div class="stat-strip-icon" style="background:rgba(59,130,246,.1);">📊</div>
+        <div>
+          <div class="stat-strip-num">1,247</div>
+          <div class="stat-strip-lbl">Skills tracked</div>
+        </div>
+      </div>
+      <div class="card stat-strip-card">
+        <div class="stat-strip-icon" style="background:rgba(16,185,129,.1);">📈</div>
+        <div>
+          <div class="stat-strip-num">+18%</div>
+          <div class="stat-strip-lbl">Python demand MoM</div>
+        </div>
+      </div>
+      <div class="card stat-strip-card">
+        <div class="stat-strip-icon" style="background:rgba(245,158,11,.1);">⚡</div>
+        <div>
+          <div class="stat-strip-num">142</div>
+          <div class="stat-strip-lbl">Emerging skills</div>
+        </div>
+      </div>
+      <div class="card stat-strip-card">
+        <div class="stat-strip-icon" style="background:rgba(30,58,138,.1);">🏢</div>
+        <div>
+          <div class="stat-strip-num">50K+</div>
+          <div class="stat-strip-lbl">Job postings analyzed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts row 1 -->
+    <div class="chart-grid">
+      <!-- Bar chart -->
+      <div class="card chart-card anim-fade-up delay-2">
+        <div class="chart-card-header">
+          <h3>Top 10 In-Demand Skills</h3>
+          <span class="badge badge-blue">Feb 2026</span>
+        </div>
+        <div class="chart-wrap" style="height:320px;">
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Pie chart -->
+      <div class="card chart-card anim-fade-up delay-3">
+        <div class="chart-card-header">
+          <h3>Skill Category Breakdown</h3>
+          <span class="badge badge-navy">All Roles</span>
+        </div>
+        <div class="chart-wrap" style="height:320px;">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trend chart — full width -->
+    <div class="card chart-card anim-fade-up delay-2" style="margin-bottom:1.5rem;">
+      <div class="chart-card-header">
+        <h3>Skill Demand Trends (Last 6 Months)</h3>
+        <div style="display:flex;gap:.5rem;">
+          <span class="badge badge-blue">Python</span>
+          <span class="badge badge-green">Tableau</span>
+          <span class="badge badge-amber">Power BI</span>
+        </div>
+      </div>
+      <div class="chart-wrap" style="height:260px;">
+        <canvas id="trendChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Bottom grid -->
+    <div class="bottom-grid">
+      <!-- Emerging skills -->
+      <div class="card bottom-card anim-fade-up delay-2">
+        <div class="chart-card-header">
+          <h3>🚀 Emerging Skills</h3>
+          <span class="badge badge-green">Trending</span>
+        </div>
+        <div id="emergingSkillsList"></div>
+      </div>
+
+      <!-- By industry -->
+      <div class="card bottom-card anim-fade-up delay-3">
+        <div class="chart-card-header">
+          <h3>📁 Demand by Industry</h3>
+          <span class="badge badge-navy">2026</span>
+        </div>
+        <div class="industry-list stagger">
+          <div class="industry-item">
+            <span class="industry-label">Finance</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+            </div>
+            <span class="industry-pct">88%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">Technology</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+            </div>
+            <span class="industry-pct">95%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">Healthcare</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+            </div>
+            <span class="industry-pct">72%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">E-Commerce</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+            </div>
+            <span class="industry-pct">80%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">Education</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:58%"></div></div>
+            </div>
+            <span class="industry-pct">58%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">Government</span>
+            <div class="industry-bar-wrap">
+              <div class="progress-bar"><div class="progress-fill" style="width:44%"></div></div>
+            </div>
+            <span class="industry-pct">44%</span>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--muted);">
+          % of job postings requiring data skills in this industry
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><img src="assets/logo.svg" alt="HireSight" style="height:28px;margin-bottom:.4rem;"/><p>AI-powered resume skill gap analysis.</p></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a><a href="upload.html">Upload</a>
+      <a href="dashboard.html">Dashboard</a><a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/charts.js"></script>
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('hamburger').addEventListener('click', () =>
+    document.getElementById('navLinks').classList.toggle('open'));
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.dashboard-filters').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analysis Results — HireSight</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .results-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    /* Score card */
+    .score-card {
+      padding: 2.5rem;
+      text-align: center;
+      position: sticky;
+      top: 88px;
+    }
+    .gauge-wrap {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 1.5rem;
+    }
+    .gauge-svg { width: 100%; height: 100%; }
+    .gauge-bg { fill: none; stroke: var(--surface2); stroke-width: 12; }
+    .gauge-circle {
+      fill: none;
+      stroke: #10B981;
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-dasharray: 503;
+      stroke-dashoffset: 503;
+      transform-origin: center;
+      transform: rotate(-90deg);
+    }
+    .gauge-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .score-num {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .score-denom { font-size: .85rem; color: var(--muted); }
+    .score-label {
+      font-size: .85rem;
+      font-weight: 700;
+      margin-top: .15rem;
+    }
+    .score-meta { margin-top: 1.5rem; }
+    .score-meta p { font-size: .88rem; margin-bottom: .75rem; }
+    .mini-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 1.25rem;
+    }
+    .mini-stat {
+      padding: .85rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .mini-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .mini-stat-lbl { font-size: .75rem; color: var(--muted); }
+
+    /* Right column */
+    .results-right { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .result-section-card { padding: 2rem; }
+    .result-section-card h3 {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    .section-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+      gap: .25rem;
+    }
+    .tab-btn {
+      padding: .6rem 1.1rem;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      transition: all var(--transition);
+      margin-bottom: -1px;
+      background: none;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Action bar */
+    .action-bar {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 2rem;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .action-bar p { font-size: .9rem; margin: 0; }
+
+    @media (max-width: 900px) {
+      .results-grid { grid-template-columns: 1fr; }
+      .score-card { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="upload.html" class="btn btn-outline">Re-analyze</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label anim-fade-down">Step 3 of 3 — Complete</div>
+    <h1 class="anim-fade-up delay-1">Your Analysis Results</h1>
+    <p class="anim-fade-up delay-2" style="margin-top:.75rem;">
+      Analyzed for: <span class="badge badge-blue" style="font-size:.85rem;vertical-align:middle;">Data Analyst</span>
+    </p>
+  </div>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+
+    <!-- Action bar -->
+    <div class="action-bar mb-4 anim-fade-up">
+      <p>✅ Analysis complete — your resume was scanned against 2,400+ current job postings.</p>
+      <div style="display:flex;gap:.75rem;">
+        <a href="resources.html" class="btn btn-primary">View Learning Resources</a>
+        <button class="btn btn-outline" onclick="window.print()">Export Report</button>
+      </div>
+    </div>
+
+    <div class="results-grid">
+      <!-- Score card -->
+      <div class="card score-card anim-scale-in delay-1">
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 200 200">
+            <circle class="gauge-bg" cx="100" cy="100" r="80"/>
+            <circle class="gauge-circle" id="gaugeCircle" cx="100" cy="100" r="80"/>
+          </svg>
+          <div class="gauge-center">
+            <div class="score-num" id="scoreNum">0</div>
+            <div class="score-denom">/ 100</div>
+            <div class="score-label" id="scoreLabel">Excellent</div>
+          </div>
+        </div>
+
+        <h3 style="margin-bottom:.25rem;">Resume Score</h3>
+        <p style="font-size:.85rem;">Your resume is highly competitive for Data Analyst roles.</p>
+
+        <div class="mini-stat-row">
+          <div class="mini-stat">
+            <div class="mini-stat-num text-success">7</div>
+            <div class="mini-stat-lbl">Skills Match</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num text-danger">5</div>
+            <div class="mini-stat-lbl">Skills Missing</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num text-blue">3</div>
+            <div class="mini-stat-lbl">High Priority</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num" style="color:var(--warning);">4</div>
+            <div class="mini-stat-lbl">Suggestions</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <a href="resources.html" class="btn btn-primary w-full" style="justify-content:center;margin-top:.5rem;">
+          📚 Start Learning
+        </a>
+      </div>
+
+      <!-- Right column -->
+      <div class="results-right">
+
+        <!-- Tabs card -->
+        <div class="card result-section-card anim-fade-up delay-2">
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="matched">✅ Matched Skills (7)</button>
+            <button class="tab-btn" data-tab="missing">⚠️ Missing Skills (5)</button>
+          </div>
+          <div class="tab-content active" id="tab-matched">
+            <div id="matchedSkillsList"></div>
+          </div>
+          <div class="tab-content" id="tab-missing">
+            <div id="missingSkillsList"></div>
+          </div>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="card result-section-card anim-fade-up delay-3">
+          <h3>
+            <div class="section-icon" style="background:rgba(245,158,11,.1);font-size:.9rem;">💡</div>
+            Improvement Suggestions
+          </h3>
+          <div id="suggestionsList"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><img src="assets/logo.svg" alt="HireSight" style="height:28px;margin-bottom:.4rem;"/><p>AI-powered resume skill gap analysis.</p></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a><a href="upload.html">Upload</a>
+      <a href="dashboard.html">Dashboard</a><a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/results.js"></script>
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('hamburger').addEventListener('click', () =>
+    document.getElementById('navLinks').classList.toggle('open'));
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
