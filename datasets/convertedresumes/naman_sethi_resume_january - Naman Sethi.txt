@@ -1,0 +1,59 @@
+NAMAN SETHI
++919958364694|namansethi1328@gmail.com|linkedin.com/in/namansethi13|github.com/namansethi13|NewDelhi,India
+SUMMARY
+SoftwareDevelopmentEngineerwithexperienceshippingproduction-gradebackendandfull-stacksystemsusingPython,
+Django,Docker,SQL,andCloud(AWS/GCP).
+EXPERIENCE
+SDEIntern Nov.2025–Present
+Adbrew|Django,React,Docker,AWS,MongoDB Noida,UttarPradesh
+•
+Designedandshippedplacement-basedbidmodifiersforcampaignlaunchworkflows,enablingadvertisercontrolatcreationtimeand
+impacting300+customerorganizations.
+•
+IntegratedlauncherfeatureswithexistingbackendservicesandRESTAPIsincampaignmanagementsystemsanddelivered
+production-readyfunctionalitywithinthefirstweek.
+•
+Builtautomationandbulk-editflowstosupportlarge-scalecampaignconfigurationandreducemanualoperationaloverhead.
+FullStackDeveloper(Parttime) August2024–August2025
+Tranasha.in|SvelteKit,DjangoRESTFramework,TailwindCSS,PostgreSQL,Redis,Docker,GCP Noida,UttarPradesh
+•
+Ownedend-to-enddevelopmentofascalable,stablewebapplication,deployedonGoogleCloudPlatformusingDocker.
+Builtcorebackendservices,real-timemessaging,distributed(Redis-based)notificationqueues,andAIsearch.
+•
+•
+DeployedonGCPwithscalableandmodulararchitecture;served200+monthlyuserswithhighavailabilityandscopeforscalability.
+InternEngineering Jul.2023–Sep.2023
+PublicisSapient|RASA,Docker,FastAPI,Streamlit,Grafana,PostgreSQL Gurgaon,Haryana
+DesignedanddevelopedadistributedchatbotdeploymentandanalyticsplatformusingFastAPI,Docker,andPostgreSQL.
+•
+•
+Reduceddeploymenttimeby50%throughCI/CDautomationandenhancedsystemscalability,reliability,anddevelopedobservabilityAPIs
+usingGrafanadashboards.
+PROJECTS
+ZenCity|Deployed|Github|GoogleADK,VertexAI,Gemini,React,Firebase,GCP Jul.2025
+BuiltdistributedbackendservicesandAIagentsdeployedoncloudinfrastructure(GCP,VertexAI)toanalyzegeo-taggedcitydatainrealtime.
+•
+•
+Designedascalablearchitectureachieving99.99%uptime,integratinglarge-scaledatapipelinesandreal-timeGoogleMapsvisualization.
+CrowdGuard|Github|Django,Kafka,LangGraph,Gemini,Docker Nov.2025
+•
+BuiltaDjango-basedagenticbackendforAI-poweredsurveillance,processing3–4CCTVfeedsat30sintervalsusingKafkastreamingand
+LLM-drivenanomalydetection.
+•
+Containerizedanasynchronousalertingpipeline,achieving<10send-to-endincidentnotificationsduringa24-hourhackathondemo.
+TECHNICALSKILLS
+Languages:Python,JavaScript(ES6+),C/C++,SQL,HTML/CSS,Java
+Frameworks/Libraries:Django,DjangoRESTFramework(DRF),FastAPI,SvelteKit,React
+Tools&Platforms:Docker,Git,Linux,Redis,PostgreSQL,OracleCloudInfrastructure,Firebase(Firestore-NoSQL),GoogleCloudPlatform(GCP)
+Relevantcoursework:ObjectOrientedProgramming,CloudComputing,Databasemanagementsystem,AdvancedDataStructuresand
+Algorithms,ComputerNetworks,OperatingSystems
+ProjectManagement:Agile/Scrum,Jira
+LEADERSHIP,AWARDS&CERTIfiCATIONS
+• TechCo-Head,TechSoc(MSI(T)):Ledtechnicalinitiativesandcompetitionswith100+participants.
+• OracleCertified: CloudInfrastructureFoundationsAssociate, AIFoundationsAssociate
+• Finalist,SmartIndiaHackathon2022andTop15atGoogleAgenticAIDayHackathon(700+teams).
+EDUCATION
+GuruGobindSinghIndraprasthaUniversity NewDelhi,Delhi
+MasterofComputerApplications(SoftwareEngineering)CGPA:8.5 Aug.2024–Jul.2026(Exp.)
+MaharajaSurajmalInstitute NewDelhi,Delhi
+BachelorofComputerApplicationsCGPA:9.56 Dec.2021–Jul.2024

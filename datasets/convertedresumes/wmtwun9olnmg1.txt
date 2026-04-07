@@ -1,0 +1,85 @@
+id Developer
+
+Education
+
+a ac A I I TS ES Nov 2022 - Jun 2026
+B.Tech in Computer Science & Engineering CGPA: 7.22
+Class XT] | \Qiimitasieasieieientsietiieems 2021 | 80%
+
+Technical Skills
+
+Languages: Kotlin, Java, SQL
+
+Modern Android UI: Jetpack Compose, Compose Navigation, Material Design 3 (M3), State Management (Flow /State
+Recomposition Optimization
+
+Architecture & DI: MVVM, MVP, MVI, DAO, Clean Architecture, Dagger Hilt
+
+Android Libraries: Kotlin Coroutines, Kotlin Flow, Retrofit, Coil, Room Database
+
+Android Core: Activity Lifecycle, Runtime Permissions
+
+Backend & Tools: Firebase (Authentication, Realtime Database, Cloud Storage), RESTful APIs, Git, GitHub,
+Android Studio
+
+Core Concepts: Data Structures & Algorithms, OOP, Operating Systems (Basics)
+
+Projects
+
+Readify | Personalized Digital Library & Reader GitHub | LinkedIn
+
+« Developed a scalable e-book app using MVVM architecture and Clean Architecture principles to ensure a
+
+separation of concerns and maintainable codebase.
+
+« Streamlined dependency management with Dagger Hilt, reducing manual constructor injection boilerplate by
+40% and enhancing app testability.
+
+* Optimized data synchronization via Firebase Firestore, ensuring sub-second latency for real-time reading progress
+updates and reliable offline access.
+
+« Engineered a high-performance UI with Jetpack Compose and Coil for asynchronous image loading, significantly
+reducing memory overhead and ensuring a smooth 60 FPS scrolling experience for large book catalogs
+
+Modern Recipe App | Reactive Recipe Explorer with Jetpack Compose GitHub | LinkedIn
+
+© Designed a fully declarative UI using Jetpack Compose, replacing legacy XML to build a highly
+driven interface with seamless transitions and Material 3 design principles.
+
+« Implemented MVVM Architecture to ensure strict separation of concerns, leveraging Compose Navigation with
+type-safe arguments to manage complex data flow and screen states across the application.
+
+@ Integrated TheMealDB REST API via Retrofit and Gson, implementing custom error-handling wrappers to manage
+API quotas and network latency, ensuring a 99% crash-free user experience during data fetching.
+
+# Leveraged Coil for asynchronous image loading and memory-efficient caching, reducing memory consumption by
+approximately 20% when rendering high-density recipe grids and detail screens.
+
+sponsive, state-
+
+BharatKrishi | Offline-First Agricultural Assistant GitHub
+Smart India Hackathon (SIH 2025 Finalist Selected Project)
+
+¢ Built a multi-screen application using Jetpack Compose & Material Design 3.
+and StateFlow for seamless, reactive UI transitions.
+
+© Utilized Retrofit to fetch and parse Agri-Market data and Weather Intelligence, providing farmers with proactive
+alerts and up-to-the-minute crop valuations
+
+© Structured and developed a robust local data layer us
+data remain accessible in low-connectivity rural areas.
+
+# Delivered a bilingual, high-contrast interface optimized for outdoor visibility, specifically tailored to enhance accessibility
+for diverse farmer demographics.
+
+nplementing Compose Navigation
+
+g Room Database, ensuring critical agricultural logs and market
+
+Achievements
+
+Smart India Hackathon 2025 (F
+ist, HACKMOR Hackathon 2026.
+ Udemy Certification: Completed 50+ hours of coursework in Android Development (Kotlin & Jetpack Compose). Udemy
+
+Attempt) LinkedIn

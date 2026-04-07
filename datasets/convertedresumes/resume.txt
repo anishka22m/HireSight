@@ -1,0 +1,49 @@
+Varsha L. Thirumalai
+San Jose, CA| vthiru300@gmail.com| 206-731-9102| https://vthiru300.github.io|
+https://www.linkedin.com/in/varsha-thiru/
+EDUCATION
+San Jose State University August 2022-May 2024
+Masters of Science in Electrical Engineering (Graduated)
+Subjects Taken: Computer Architecture, Embedded SOC, Intelligent Autonomous Sys, Neural Networks GPA: 3.5/4
+PES University August 2015-May 2019
+Bachelor of Engineering in Electronics and Communications GPA: 3.02/4
+SKILLS
+• Programming Languages: C, Python, Verilog
+• SOC Design Fundamentals, Xilinx FPGA, Vivado, Raspberry Pi. Sensor Integration, System Design
+• Protocols: CAN, I2C, SPI, AXI, APB
+• Tools: Git, Jira, Confluence, Slash Framework, Agile, Lean, NumPy. Pandas, Matplotlib, Scikit-Learn
+WORK EXPERIENCE
+Wipro Technologies- Client: Ford Motors Jan 2020–May 2022
+Software Engineer Bangalore, India
+• Developed Firmware (High Level Application Code) in C for windows, mirrors, wipers, seat control and latches.
+• Created Integration tests, Unit tests, Automation Scripts in C and Python for components like windows, mirrors,
+wipers, seat control embedded environments.
+• Experienced on Script development, Test cases Analysis, writing tests, bug fixing.
+• Developed API’s using Python and C for windows, wipers, seat control and latches.
+• Improved the test result efficiency to 65% by creating a system plan before Regression Testing in the lab.
+• Created a Python script for regression testing that detects bugs, immediately alerts during system failures or setup
+issues, slashing false failure rates and false positives each by 50%. This efficiency saved two days and cut costs by up
+to 10k dollars.
+• Met quarterly performance metrics with 89% accuracy in test results and improved lean and agile skills, underscoring
+the importance of precise communication for adapting to evolving client and user expectations.
+• Created a Software Manual for new joiners for the initial work process and ramp-up.
+PROJECTS
+2D detection using Yolov3 on custom FPGA(arm64arch) [link]
+• Developed scripts for evaluating and deploying LPYOLO, a low-precision YOLO variant designed for efficient face
+detection on FPGA platforms, as detailed in the associated paper[link] on the Widerface Dataset.
+• Utilizes Brevitas, a PyTorch-based library, for quantization-aware training (QAT) of models, enhancing their
+performance and compatibility with low-precision hardware environments.
+• Models were prepared for custom FPGA deployment by converting them into the ONNX format, ensuring
+interoperability and ease of use across different platforms and tools.
+• Achieved an mAP of 0.76 over 100 epochs. [Was able to perform one experiment due to resource contraints].
+Tic-tac-toe on VGA Peripheral Interface Integration with ARM Cortex M0 [link]
+• Engineered a system that incorporated a Cortex-M0 processor, AHB-Lite bus, AHB VGA peripherals, and internal
+memory, all deployed on Arm Cortex M0 having Artix A7 FPGA board.
+• Utilized Keil Software to craft test programs in C, showcasing the tic-tac-toe mechanics. This effectively highlighted
+the seamless hardware-software interplay within the embedded system, with simulations and verifications carried out.
+Building upon this foundational program, I devised the logic for a two-player snake game and successfully executed it
+on the board.
+Designed an IoT-driven vending machine for a lab equipment using Arm Cortex M3 [link]
+• Vending machine using Arm Cortex M3, integrated cash transaction mechanism and RFID. Used DC motors instead
+of Stepper thereby reducing equipment costs by 30% and prevented wastage of components by 18% through precise
+dispensing mechanisms. Self-designed the whole system of the vending machine.

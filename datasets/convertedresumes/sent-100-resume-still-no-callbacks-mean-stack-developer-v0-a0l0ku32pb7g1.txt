@@ -1,0 +1,57 @@
+ASWIN V
+
+Kozhikode, Kerala, India | aswinv793@gmail.com | +91 7592024806 | LinkedIn | GitHub | LeetCode
+
+Professional Summary
+
+Full-Stack (MEAN) Developer with 1.4+ years of hands-on experience designing, building, and deploying
+production web applications. Proficient in Angular 17+, Node.js, and AWS infrastructure. Successfully delivered
+scalable platforms with features that optimized user workflows by 87%. Strong expertise in the Repository
+Pattern, REST APIs, and performance optimization using Nginx.
+
+Technical Skills
+
+Languages: JavaScript (ES6+), TypeScript, SQL, NoSQL.
+
+Frontend: Angular 17+, RxJS, Tailwind CSS, Bootstrap 5, HTMLS, CSS3.
+
+Backend: Nodejs, Express.js, RESTful APIs, JWT, Repository Pattern, MVC Architecture.
+Databases: MongoDB, PostgreSQL, Firebase.
+
+Realtime/Messaging: Socket.I0.
+
+DevOps/Cloud/Tools: AWS (EC2), Cloudinary, Nginx, Vercel, Render, Git & GitHub, Postman.
+
+Professional Experience
+
+Full-Stack Developer Brototype, Calicut Aug 2024 - Present
+
+e Completed an intensive, hands-on internship focused on the MEAN Stack and DSA.
+
+e Architected, developed, and deployed 5+ production-ready web applications, managing the full
+Software Development Life Cycle (SDLC) from database design to AWS deployment.
+
+« Actively participated in code reviews and collaborative development, consistently implementing
+features according to modular architecture and industry best practices.
+
+Projects
+
+Expansy — Full-Stack E-commerce Platform Live | GitHub
+* Built mobile-first platform handling 100+ products with secure Razorpay payment gateway integration.
+e Engineered a real-time admin dashboard that reduced product onboarding time by 87% (15 mins to 2
+. Cail Nginx on AWS EC2, achieving a 1.8s page load time and maintaining 99.9% uptime.
+
+QuickChat - Real-Time Chat Application GitHub
+
+« Developed real-time, two-client chat using Socket.io for low latency.
+« Implemented Repository Pattern architecture for clean, maintainable, scalable code.
+
+User Management System (RBAC) GitHub
+
+¢ Implemented JWT refresh tokens and RBAC for high-security authentication.
+¢ Repository Pattern usage cut API response latency by 60%.
+
+Education
+
+MSc. Information Technology (Cyber Security & Forensics) Parul University, Gujarat. 2021 - 2023
+BSc. Forensic Science Madurai Kamaraj University, Tamil Nadu. 2018 - 2021

@@ -1,0 +1,82 @@
+dia LinkedIn GitHub
+
+Profile Summary
+
+Computer Science student with a specialization in AI/ML and a portfolio of practical projects in conversational
+AT and computer vision, Experienced in fine-tuning LLMs, building RESTful APIs with FastAPI, and developing
+models with high accuracy. Seeking to contribute strong problem-solving and development skills to an innovative
+team.
+
+Technical Skills
+
+Programming Languages: Python, JavaScript, C++, Java, HTMLS, OSS?
+AI/ML Frameworks: TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers, OpenCV, YOLO, Rasa
+Framework, Computer Vision
+
+Backend & APIs: FastAPI, Flask, RE!
+Databases: SQL, MongoDB, SQLite
+Tools & Others: Docker,
+
+ful API design
+
+Code, Google Colab, Chart.js
+
+Experience
+
+AI/ML Intern Jul 2025 ~ Aug 2025
+Black Box
+
+o Architected conversational AI system using Rasa framework with Python and SQLite backend
+o Developed RESTful APIs with
+o Implemented Llama 3.2 LLM via Ollama for intelligent conversation analysis and response generation
+
+FastA PI integrating chatbot, database, and LLM components
+
+© Fine-tuned Gemma 1B model using Hugging Face transformers for domain-specific retail query handling
+
+Frontend Development Intern Nov 2024 ~ Jan 2025
+Medecro Technologies Put Ltd
+
+© Developed responsive clinic management system with modern web technologies
+
+© Created interactive data visualizations for appointment scheduling and inventory management using Chart.js
+
+o Implemented user-friendly interfaces for healthcare workflow optimization
+
+Machine Learning Intern Jun 2024 ~ Jul 2024
+Z Plus Surveillance Security Put Ltd
+
+o Developed ML models for intelligent surveillance and security analytics
+o Built real-time computer vision systems for automated video feed analysis and threat detection
+
+© Optimized model performance for deployment in production surveillance environments
+
+Proje
+
+AI Svasthya Samanvay: Healthcare Intelligence System IDE Bootcamp
+
+o Developed Al-powered healthcare platform with patient triage, no-show prediction, risk assessment, and footfall
+
+forecasting
+
+o Implemented predictive analytics algorithms to optimize hospital operations and resource allocation
+
+© Tech: Python, Flask, Pandas, HTML5, CSS3, Chart.js, SweetAlert2
+
+Real-Time Blur & Motion Detection System 2024
+
+o Engineered computer vision system integrating deep learning for detecting blur, camera shake, and video in-
+stability
+
+o Achieved 95% classification accuracy using custom TransformerEncoder architecture
+o Tech: Python, OpenCV, NumPy, TensorFlow, Flask
+
+Achievements & Certifications
+
+Achievements: All India Rank 18 ~ NCAT
+Certifications: MongoDB Python Developer (‘
+
+| Finalist - Medecro HealthHack 2024
+
+spt 2024) | NPTEL Python Programming (Jun 2024)
+

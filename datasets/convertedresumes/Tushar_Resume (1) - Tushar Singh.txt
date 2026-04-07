@@ -1,0 +1,35 @@
+Tushar Kumar Singh
+8535011598 | tusharsingh5213@gmail.com | www.linkedin.com/in/tusharr52 | https://github.com/Tushar-singh52
+Education
+Graphic Era Deemed To Be University Dehradun, Uttarakhand
+Bachelor of Technology in Computer Science and Engineering 2024 –2028
+CGPA : 8.81/ 10 Specialisation : Artificial Intelligence and Machine Learning
+Experience
+Tech Club Volunteer Dehradun, Uttarakhand
+Graphic Geeks, Graphic Era Deemed To Be University Jan 2025 – Present
+• Coordinated and managed multiple hackathon teams from different regions of India, ensuring smooth onboarding,
+communication, and event flow.
+• Collaborated with the organizing team to streamline team management, improve participant experience, and ensure
+successful execution of the hackathon.
+Backend Developer
+Traffic Simulation Project Aug. 2025
+• Designed and implemented core Data Structures and Algorithms in C to simulate realistic traffic flow.
+• Developed backend logic to efficiently manage vehicle states, road networks, and traffic signals, ensuring accurate
+and scalable simulation performance.
+Projects
+Hotel Management System | C++ July 2025
+∗ Designed a console-based application to manage hotel operations using Linked Lists.
+∗ Implemented operations (add, update, delete, search) for efficient data handling.
+∗ Focused on clean coding practices and logical separation of modules.
+Cancer Prediction System | Python, Machine Learning December 2025
+∗ Developed a binary classification model using Logistic Regression for cancer prediction.
+∗ Performed data preprocessing, feature scaling, and feature selection.
+∗ Evaluated model using accuracy score.
+Technical Skills
+Languages: C/C++, Python, HTML
+Frameworks: Scikit-learn
+Developer Tools: Git, VS Code, Visual Studio, Jupyter Notebook
+Libraries: pandas, NumPy, Matplotlib
+Certifications
+AWS Cloud Essentials Training Badge– Amazon Web Services
+NPTEL (Swayam) – Statistical Learning for Reliability Analysis, IIT Kharagpur (Silver Elite)

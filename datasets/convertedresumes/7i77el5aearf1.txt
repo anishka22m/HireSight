@@ -1,0 +1,75 @@
+Siddhartha Katiyar
+ED | 2.020 /in/sicaharthatativar | github.com/siddharthakatiyar
+
+EXPERIENCE
+Cisco Bengaluru, India
+Technical Intern 1 Jan 2025 — Jun 2025
+
+— Built a full-stack dashboard mapping CLI commands to TDL/YANG models, reducing lookup time from 5h =
+under 30s (98% faster).
+
+— Automated cross-reference analysis across 4+ structured interfaces in Python, eliminating repetitive effort.
+
+— Delivered SSH-based distributed execution used by 20+ engineers, saving 10+ hours weekly each.
+
+— Standardized automation with SDLC best practices, reducing workflow failures by 40% and enhancing reliability.
+
+— Engineered a zero-installation SSH tool for remote analysis, cutting new engineer onboarding from 60+ min to
+under 2 min.
+
+Fidelity International Gurugram, India
+Technology Intern Jun 2024 — Jul 2024
+— Reverse-engineered 100,000+ lines of MetaMask code to design a secure custodian wallet for institutional key
+
+management.
+
+— Developed a secure key-signing server and dashboard with ReactJS, ExpressJS, and Ethers.js, reducing private key
+exposure risk to 0%.
+
+— Collaborated in a 10-member Agile team, boosting sprint velocity by ensuring 100% on-time code reviews and
+CI/CD pipeline health.
+
+Siemens Gurugram, India
+Software Engineer Intern Jun 2023 — Jul 2023
+— Delivered ChatConnect, a web app enabling real-time messaging for 500+ users, integrating role-based access
+
+control and encrypted storage to ensure secure communication.
+— Integrated Spring Security (berypt + JWT HS256), passing penetration tests with zero authentication failures.
+— Increased internal communication efficiency by 30% compared to email workflows.
+— Implemented modular Spring Boot architecture with REST APIs, reducing feature integration time by 25% and
+enabling easier microservices migration.
+
+EDUCATION
+Jaypee Institute of Information Technology Noida, India
+B.Tech. in Computer Science Engineering Oct 2021 ~ Jun 2025
+New Kingston Senior Secondary School Kanpur, India
+Senior Secondary (Class XII), 92.4% Jul 2020 — Jun 2021
+
+TECHNICAL SKILLS
+Languages: C++, Java, Python, JavaScript, SQL
+Frameworks & Libraries: ReactJS, NodeJS, ExpressJS, Spring Boot, REST APIs
+Databases: PostgreSQL, MySQL
+Tools: Git, GitHub, Jira, Agile, Scrum, WebRTC, SSH, CI/CD
+Concepts: Backend systems, Full-stack development, API design, Authentication & Security, SDLC, Unit Testing,
+Data Structures & Algorithms
+
+ACHIEVEMENTS
+
+CodeChef 5-star (2068, Top 0.2% globally)
+Codeforces Expert (1732, Top 0.8% in India)
+NTSE Scholar (2019): Top 0.2% nationwide (Top 2,000 out of IM+ students)
+
+PROJECTS
+
+eVaarta — WebRTC Video Conferencing | NodeJS, React.JS, WebRTC
+— Deployed video conferencing platform for 50+ users, achieving 20% lower latency than baseline.
+— Designed REST APIs for multi-peer communication, reducing response times by 30%.
+— Scaled to 100+ test users with minimal server load via WebRTC’s server-less architecture.
+— Deployed and load-tested platform on cloud-ready infrastructure, improving system scalability and reliability.
+
+POSITION OF RESPONSIBILITY
+
+Knuth Programming Hub, JIIT | Coordinator Jul 2023 - Aug 2024
+— Coordinated Knuth Cup, an ICPC-style programming competition at Impressions 2024 with 100+ participants,
+overseeing problem setting, event logistics, and judging
+

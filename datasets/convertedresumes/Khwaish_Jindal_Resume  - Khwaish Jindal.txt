@@ -1,0 +1,58 @@
+Khwaish Jindal
++918810681703 ●
+DELHI, India 110040 ● KhwaishJindal21@gmail.com
+SUMMARY WEBSITES, PORTFOLIOS,
+PROFILES
+Full Stack Developer | AI/ML Engineer | NLP Specialist
+Passionate Full Stack Developer and AI/ML Engineer with hands-on ● LinkedIn: khwaish-jindal
+experience building end-to-end products using React, Python, NLP, and ● GitHub: khwaishjindal
+cloud platforms (AWS, GCP). Proven ability to develop production-
+● Portfolio: khwaishjindal.github.io
+grade chatbots, smart assistants, and scalable web apps. Published
+NLP research and deployed solutions with real-world impact. Thrives in
+EDUCATION
+agile teams, driven by curiosity and performance.
+BCA IOP AIML, Expected in 10/2025
+Galgotias University
+INTERNSHIPS
+Database Programming with SQL
+Generative AI Developer – Google for Developers (Remote)
+ORACLE ACADEMY
+● Researched and compared 3+ LLMs for content generation using prompt
+engineering POWER BI
+● Explored prompt engineering, automation, and AI applications.
+Android Developer – Google Developers Program (Virtual) CERTIFICATIONS
+● Utilized Android Studio to develop applications using Java. - Business Analytics – NPTEL
+● Improved UI responsiveness by 25% through layout optimization. - Training & Development - NPTEL
+- Game Development – WhiteHat Jr
+AI/ML Engineer – AWS Academy (Virtual) - Data Analytics & Visualization – Accenture
+● Worked on cloud-based AI/ML projects and deployment. - 4th National Conference - IIMT
+● Used AWS tools for model training and cloud integration
+TECHNICAL SKILLS
+ACHIEVEMENTS Frontend: HTML, CSS, JavaScript, React
+Backend: Python, Java
+● A Researcher in NLP: Presented a paper on sentiment analysis using
+Databases: SQL, MySQL, Firebase
+TextBlob & VADER at the International Conference on Disruptive
+Tools: Git, Power BI, Android Studio
+Technologies.
+Concepts: Responsive Design, UI/UX, ML,
+● Data analytics and visualization certificate by Accenture
+NLP, Agile, Git Workflow
+● Entrepreneurship E-SUMMIT Certificate from IIM ROHTAK.
+SOFT SKILLS
+PROJECTS
+1. Emergency response app – Android, Java, Firebase developed a mobile ● Problem Solving
+app for real-time emergency response tracking with cloud-integrated ● Teamwork & Collaboration
+location services ● Critical Thinking
+2. College enquiry chatbot – Python, NLP, Tkinter created an AI-powered ● UI/UX Understanding
+chatbot that answers academic and admission-related queries using ● Communication Skills
+natural language processing
+3. Fashion stylist website – HTML, CSS, JavaScript built a dynamic and
+responsive fashion e-commerce website with user interaction and product
+filtering features
+4. AI Desktop Assistant (Jarvis) – Python, Speech Recognition,
+pyttsx3, web automation developed a voice-controlled assistant
+capable of performing OS-level tasks, searches, and user prompts
+5. Responsive portfolio – HTML, JavaScript, designed and deployed a
+personal website to showcase projects, skills, and certifications.

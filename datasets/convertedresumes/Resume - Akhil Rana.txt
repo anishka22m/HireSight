@@ -1,0 +1,103 @@
+Akhil Rana
+Bengaluru, Karnataka, India
+akhilrana.com
+Software Engineer
+# resume@akhilrana.com (cid:131) +91 8532801000
+§ github.com/akhil-rana (cid:239) linkedin.com/in/rana-akhil/
+Software engineer with 3+ years of total professional experience — 2 years crafting enterprise macOS / iOS apps in Swift and 1+
+year building backend/full-stack systems with NestJS, React and PostgreSQL. Skilled in Docker, Linux, and Bash, with expertise
+in CI/CD and automation. Passionate Linux self-hoster who explores DevOps and AI through side-projects, bringing production
+rigour to personal innovations.
+EDUCATION
+Manipal Institute of Technology, Manipal 2022 - 2024
+•
+Master of Technology in Computer Science and Engineering CGPA: 8.25
+Sikkim Manipal Institute of Technology, Sikkim 2017 - 2021
+•
+Bachelor of Technology in Computer Science and Engineering CGPA: 8.56
+PROFESSIONAL EXPERIENCE
+• Juniper Networks, Bengaluru
+Software Engineer - 3 July 2025 - Present
+Software Engineer - 2 June 2024 - June 2025
+Software Engineer Intern July 2023 - May 2024
+– Marvis Client - MacOS/iOS Development: Maintained and enhanced Marvis Client applications for enterprise Wi-Fi
+environmentsusingSwiftUIandUIKit. ImplementedtelemetrycollectionusingCoreWLANframeworksandsystemprofiler
+commands to capture network performance metrics. Built automated network onboarding workflows with SCEP certificate
+enrollment and credential provisioning. Developed Marvis-CLI tool for network diagnostics, log collection, non-UI based
+configurationandMDMintegration. Createdsilentauto-upgrademechanismsforBYODdevicesusingauthenticatedhelper
+toolsandprivilegeescalation. ForiOS,implementednetworkonboardingusingNetworkExtensionframeworksandenterprise
+configuration profiles.
+– Application Infrastructure & Packaging: ArchitectedcomprehensivemacOSapplicationpackaginginfrastructureusing
+pkgbuild/productbuild for PKG files and DMG creation. Implemented complex pre/post-install shell scripts, privileged
+helper tools with SMAppService for system-level operations, XPC communication for secure inter-process messaging, and
+launchd-based daemons. Applied macOS security architecture best practices including Hardened Runtime, entitlements
+configuration, SIP compliance, and Gatekeeper requirements for enterprise deployment, achieving a 99.8% installer success
+rate and shrinking package size by 65%.
+– CI/CD&ReleaseAutomation: BuiltcomprehensiveCI/CDpipelinesacrossCircleCIandGitHubActionsforautomated
+building, testing, and deployment. Implemented automated code signing with Developer ID certificates, notarization work-
+flowsusingnotarytool,andS3-baseddistributionsystems. Createdcross-platformbuildmatricessupportingmultipleXcode
+versions with automated TestFlight/App Store releases for iOS and direct download distribution for macOS applications,
+reducing release cycle time from 3 hours to 10 minutes and manual effort by 90%.
+– Indoor Location SDK: Contributed to Mist Indoor Location solutions by maintaining sample applications for the Mist
+Location iOS SDK. Developed React Native sample applications demonstrating indoor positioning using Bluetooth Low
+Energy beacons. Created npm distribution packages for cross-platform location services integration and updated SDK
+documentation for enterprise mobile applications.
+• Squareboat Solutions, Gurugram
+Software Engineer July 2021 - February 2022
+Software Engineer Intern January 2021 - June 2021
+– Full-Stack Development: Led development of production applications using NestJS backend with TypeScript and Post-
+greSQL/MySQL databases. Redesigned Proactive For Her platform architecture implementing microservices with 3 React-
+based frontends connected to a centralized NestJS API gateway. Platform served 40k monthly active users at launch with
+pageloadtimesimprovedby45%. ImplementedRESTAPIswithJWTauthentication,datavalidationusingclass-validator,
+TypeORM integration, and Redis caching for production environments.
+– Custom Scheduling & Payment Platform: Architected and built custom scheduling and payment system to replace
+third-party solutions like Calendly, reducing SaaS spend by 80%. Developed real-time appointment booking with conflict
+detection, automated notifications, and calendar synchronization. Integrated Stripe and Razorpay payment gateways with
+webhookhandling,refundmanagement,andsubscriptionbilling,processingover$200kintransactionswhilecuttingbooking
+time by 70%. Created admin dashboard with appointment analytics and real-time updates using WebSocket connections.
+PERSONAL PROJECTS
+• Pathology Algorithm Development Workbench GSoC 2020
+– Selectedasoneof1,200studentsworldwideforGoogleSummerofCode2020todevelopaPathologyAlgorithmDevelopment
+WorkbenchforcaMicroscope. EnableduserstotraintheirownMLmodelsusinganinteractiveUI,choosetrainingdatafrom
+pre-existing caMicroscope data or custom datasets, with an interactive interface for designing algorithms from scratch using
+TensorFlow.js for real-time machine learning model training and deployment.
+• virtual-bg
+– Developed and maintained an open-source npm package with over 20,000 total downloads, providing seamless virtual back-
+ground effects for video/camera input within web browsers using MediaPipe for real-time person segmentation.
+– Features include customizable background images, blur effects, edge smoothing, and optimized performance for real-time
+video processing, supporting multiple frameworks and demonstrating scalability in production environments.
+• Peerivate - Private p2p Audio/video calls
+– Architected and developed a fully custom, end-to-end encrypted and anonymous peer-to-peer audio/video calling platform
+using WebRTC, React, and Node.js with DTLS-SRTP encryption and perfect forward secrecy.
+– Key features include real-time video/audio streaming, screen sharing, presenter mode, automatic connection recovery, and
+global CDN distribution optimized for low-latency communication. Try it out at peerivate.akhilrana.com
+TECHNICAL SKILLS
+• Programming Languages: Swift, Python, JavaScript, TypeScript, Objective-C, Java, SQL, Bash, HTML5, CSS3
+• Mobile & Frontend: SwiftUI, React.js, Next.js, UIKit, Angular, React Native, Bootstrap, Tailwind CSS
+• Backend & APIs: Node.js, NestJS, Deno, Flask, FastAPI, Django, RESTful APIs, GraphQL, WebRTC
+• Databases & Storage: MongoDB, PostgreSQL, MySQL, DynamoDB, Firebase, Redis, TypeORM, Prisma
+• DevOps & Infrastructure: Linux, Docker, Kubernetes, k3s, Git, Jenkins, Proxmox, KVM, Cloudflare, Terraform, CircleCI,
+Github Actions, Traefik, Nginx, Prometheus, Grafana
+• Specialized Tools: CoreWLAN,Xcode,NetworkExtensions,XPC,PrivilegedHelperTools,MediaPipe,TensorFlow,Tensor-
+Flow.js, Keras, Portainer
+ACHIEVEMENTS
+• Published Conference Research Paper: Co-authored"ParallelImplementationofDNACryptographyEncryptionScheme
+using MPI and CUDA," published in the proceedings of the 1st IEEE International Conference on Advances in Electronics,
+Communication, Computing and Intelligent Information Systems (ICAECIS 2023), Bangalore.
+• ProjectMentor-GoogleSummerofCode2021: ServedasaprojectmentorforGoogleSummerofCode2021,guidingand
+mentoringdevelopersincreatingaReal-timeCollaborativePathologyplatformforcaMicroscope. Providedtechnicalguidance,
+code reviews, and project management support to enable multiple scientists and researchers to collaborate simultaneously on
+pathologyanalysis. Successfullydeliveredacollaborativeplatformthatenhancedtheresearchcapabilitiesofthemedicalimaging
+community and facilitated distributed scientific research workflows.
+SIDE QUESTS
+• Infrastructure Enthusiast & Self-Hosting Advocate: Passionateaboutbuildingandmaintainingpersonalinfrastructure
+using Docker Compose, Proxmox virtualization, and container orchestration. Currently self-hosting a comprehensive suite of
+services including DNS servers, Nextcloud for file synchronization, Matrix homeserver for secure communications, lightweight
+mail servers, Jellyfin and Plex media centers, Vaultwarden password manager, GitLab/Gitea for repository management, and
+Jenkins for CI/CD pipeline automation. Experienced in network configuration, Cloudflare integration for DNS management
+and CDN services, and both on-premises Proxmox deployments and cloud infrastructure management, with focus on security
+hardening, automated backups, and reliable configurations.
+• Open Source Contributor & Community Builder: Actively contributing to the open-source ecosystem through personal
+projects and collaborative initiatives. Maintain several npm packages with good adoption rates and regularly contribute bug
+fixes, feature enhancements, and documentation improvements to various open-source projects. Advocate for open-source
+principles in software development, focusing on creating accessible, well-documented, and community-driven solutions.

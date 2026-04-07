@@ -1,0 +1,41 @@
+Shubham Sisodia
+LinkedIn | Github |shubhamsisodia84@gmail.com | Portfolio | +919811827382 | New Delhi, India
+PROJECTS
+NextBuy | Github Visit | Next.js, Typescript, MongoDB
+• Developed an e-commerce platform using Next.js, Prisma, and TypeScript
+• Implemented features like admin dashboard and managing orders, products , contacts ,users.
+• Integrated payment processing with Stripe and email notifications using Nodemailer for sending e-mails.
+• Utilized TailwindCSS and ShadCN UI for styling, responsive layout and components.
+Airbnb Clone| GitHub Visit | Next.js, TypeScript, MongoDB
+• Developed Airbnb clone using Next.js, MongoDB, Prisma, and NextAuth for seamless user experience.
+• Created dynamic property listing with search, filter, and booking system.
+• Implemented real-time booking system with NextAuth and Jsonwebtoken for user authentication.
+• Utilized React Hook Form for efficient form handling and fast performance.
+Eventory | GitHub Visit | Next.js, TypeScript, MongoDB, Stripe
+• Developed event management app with Next.js, MongoDB, user authentication with Clerk.
+• Integrated React Hook Form and MongoDB for efficient form handling and fast performance.
+• Enabled users to perform CRUD operations on events.
+• Implemented Stripe for payment processing.
+SKILLS
+• Frontend: HTML, CSS, TailwindCSS, JavaScript, TypeScript, ReactJS, Redux, Zustand, NextJS
+• Backend: Node.js, Express.js, TypeScript
+• Database: MySQL, MongoDB, PostgreSQL
+• Authentication: NextAuth
+• ORMs: Prisma, Drizzle
+• Version Control: Git, Github
+• Soft Skills: Problem solving, Teamwork, Communication
+EDUCATION
+USICT, GGSIPU
+September 2025 –
+Masters of Computer Applications (SE)
+May 2027 (expected)
+DELHI UNIVERSITY
+November 2021 – May 2024
+Bachelor of Business Economics
+Relevant Coursework: SQL, Python, Computer Networking, HTML, CSS
+CERTIFICATIONS
+• Supervised Machine Learning: Regression and Classification – Coursera.org/DeepLearning.ai
+• JavaScript Essential Training - LinkedIn Learning
+• React.js Essential Training - LinkedIn Learning
+• Express.js - LinkedIn Learning
+• MongoDB – LinkedIn Learning

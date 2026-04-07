@@ -115,14 +115,35 @@
   });
 
   /* ── Analyze ─────────────────────────────────────────────── */
-  analyzeBtn.addEventListener('click', startAnalysis);
+/* ── Analyze ─────────────────────────────────────────────── */
+analyzeBtn.addEventListener('click', startAnalysis);
 
-  function startAnalysis() {
-    if (!selectedFile) return;
-    uploadSection.style.display = 'none';
-    progressSection.style.display = 'block';
-    simulateProgress();
+async function startAnalysis() {
+  if (!selectedFile) return;
+
+  const formData = new FormData();
+  formData.append("file", selectedFile); // The key "file" must match server.py
+
+  try {
+    const response = await fetch("/api/analyze", {
+      method: "POST",
+      body: formData
+    });
+
+    if (!response.ok) throw new Error("Server error");
+
+    const result = await response.json();
+    
+    // Save to localStorage so results.html can read it
+    localStorage.setItem("analysisResult", JSON.stringify(result));
+
+    // Redirect to the results page
+    window.location.href = "/results"; 
+  } catch (error) {
+    console.error("Analysis failed:", error);
+    showError("Analysis failed. Please try again.");
   }
+}
 
   const stages = [
     { pct: 15, msg: 'Uploading resume…' },
@@ -138,7 +159,6 @@
     function step() {
       if (idx >= stages.length) {
         setTimeout(() => { window.location.href = 'results.html'; }, 700);
-        return;
       }
       const { pct, msg } = stages[idx];
       progressFill.style.width = pct + '%';

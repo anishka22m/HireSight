@@ -1,0 +1,72 @@
+JED 6 ye
+
+EDUCATION
+
+SSS 2021 ~ 2025
+B.Tech in Computer Science , CGPA: 9.12 Ibrahimpatnam, Telangana
+ie h picasSialiogs 2019 ~ 2021
+Intermediate (MPC) Mahabubnagar, Telangana
+
+— Marks: 984/1000
+= 'TS-EAMCET Rank: 5914
+~ JEE Main Percentile: 95%
+
+EXPERIENCE
+
+Jan 2025 ~ Present,
+Associate Software Engineer (Intern > Full-time) Hyderabad, Telangana
+— Developed and maintained a full-stack Rewards Recognition system to streamline employee nominations, approvals, and
+recognition workflows and Implemented role-based access control (RBAC).
+— Designed scalable backend APIs using ASP.NET Core MVC _ EF Core, ensuring efficient data handling and optimized SQL queries.
+— Implemented notification system (emails/alerts) for nomination status updates.
+
+PROJECTS
+
+Classmate AI ~ Intelligent Study Companion (RAG Application) | MERN ,Qdrant, GeminiAPI- GitHub 2025
+
+— Built an Al-powered learning assistant leveraging Retrieval-Augmented Generation (RAG) to enable natural language querying
+over PDFS, websites, and YouTube
+
+— Designed implemented a scalable backend with Express,js & MongoDB, supporting chat session management, file storage, and
+vector-based retrieval with Qdrant.
+
+— Implemented state management and async loading UI patterns to ensure a seamless user experience.
+
+Collaborative Code Editor | Socket.io , React.js , Express.js - GitHub 2024
+
+~— Designed and developed a full-stack web-based code editor enabling real-time collaborative coding between multiple users using
+WebSockets (Socket.10)
+
+— Implemented real-time notification system to enhance team collaboration and user interactivity.
+
+= Added a rich text editor using CodeMirror for an improved coding experience with syntax highlighting and formatting support.
+
+Social Media Web Application | MERN stack - GitHub 2024
+— Built a full-stack web app with user authentication, post creation, likes, and comments.
+
+— Implemented Authentication using JSON Web Tokens
+
+— Created secure REST APIs and managed data with MongoDB Atlas
+
+— Followed MVC architecture for clean and scalable code.
+
+TECHNICAL SKILLS
+
+</> Languages: Java , C#, Javascript.
+
+® Web Technologies: HTML, CSS, JavaScript, React.js, Express.js, Mongoose, ASP.NET, EntityFramework Core.
+& Databases: SQL, MongoDB, Qdrant.
+
+@ CourseWork : Data Structures and Algorithms, OOPs, DBMS, Operating Systems, Computer Networks.
+
+¢/ Tools : VS Code, Git, Github, VisualStudio,
+@ Generative Al(actively learning) : RAG, Prompt Engineering, LLM models Integration, Vector databases
+CERTIFICATIONS
+Full Stack Web Development - Link 100xDevs | 2024
+Data Structures and Algorithms - Link Smart Interviews | 2024
+Java Programming NPTEL | 2023
+ACHIEVEMENTS
+
+— Solved 750++ DSA problems on Leeteode with 1869 LeetCode Contest Rating (Knight)-
+~ Organized a college-level coding competition during the Cypher tech fest
+

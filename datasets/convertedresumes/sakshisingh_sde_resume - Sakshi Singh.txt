@@ -1,0 +1,57 @@
+Sakshi Singh
+New Delhi, India
+(cid:131) +91 8700620251 # sakshisingh2124@gmail.com (cid:239) linkedin.com/in/sakshi-singh-170b13232 § github.com/sakshiii21
+Technical Skills
+Programming Languages: C++, JavaScript, Python
+Front-end Development: HTML, CSS, Tailwind CSS, React.js
+Back-end Development: Node.js, Express.js
+Databases: MySQL
+AI / ML: NLP (text preprocessing, abstractive summarization), Transformer-based models, Retrieval-Augmented
+Generation (RAG) pipelines, vector search
+Core CS Concepts: Data Structures & Algorithms, OOP, Operating Systems, DBMS, Computer Networks
+Education
+University School of Information, Communication and Technology (USICT), GGSIPU 2024 – Present
+Master of Computer Applications (Software Engineering) SGPA: 8.1
+Shyama Prasad Mukherji College (SPMC), University of Delhi 2021 – 2024
+B.Sc. (Hons.) Computer Science
+Work Experience
+Institute of Admissions Professionals (IAP) Jul 2024 – Aug 2024
+Web Development Intern
+– Built a personal portfolio website in React with structured reusable components, organized pages and routing,
+worked with state management, and strengthened understanding of deployment workflows.
+– Created and configured a learning-platform website on Learnyst CMS for 100+ courses, and built two
+business / marketing websites on Wix with organizing page layouts, navigation structure, media assets, and
+responsive sections for desktop and mobile.
+Hindu Spiritual Care Institute (HSCI) Jan 2022 – Dec 2023
+Web Development Intern
+– Built a React-based call-logging web application where employees recorded call details through structured forms;
+implemented reusable components, state management, and validation to ensure reliable data submission to backend.
+– Integrated the frontend with a Node.js and Express.js backend and stored call records in a MySQL database using REST
+APIs, working on CRUD workflows, data retrieval for reviews and follow-ups, and improving frontend–backend
+coordination.
+Ramanujan College, University of Delhi Jul 2022 – Oct 2022
+Research Intern
+– Scraped, aggregated, and standardized data from 15+ social media and news websites, building a dataset of 10,000+
+entries being recognized as India’s second-largest fake news dataset.
+– Performed data cleaning and preprocessing using Python, Pandas, and NumPy, preparing the dataset for machine
+learning and further analysis.
+Projects
+Shastralok | React.js, Tailwind CSS, Node.js, Leaflet, Retrieval-Augmented Generation (RAG) GitHub | Live
+– Built an AI-powered scripture exploration platform combining a centralized repository, RAG-based mythological
+scene visualization, interactive maps, and gamified quizzes.
+– Implemented a Retrieval-Augmented Generation (RAG) pipeline by grounding AI outputs in curated scripture
+data, reducing hallucination and improving cultural and contextual accuracy.
+MinuteMind | React, Node.js, Express, NLP, Transformers GitHub | Live
+– Developed an AI-powered meeting assistant enabling users to upload or paste transcripts, generate editable summaries,
+and share them via email as PDFs or text.
+– Implemented a transformer-based NLP summarization pipeline to generate abstractive summaries from unstructured
+meeting transcripts.
+Profiles
+• LeetCode: sae21 GeeksForGeeks: sakshisingh2124 Codolio: sae21
+Achievements & Certifications
+• Achievements: Solved 600+ DSA problems on Codolio and 400+ on LeetCode, demonstrating strong problem-solving
+and algorithmic thinking.
+• Smart India Hackathon 2024 (Stage 3 Finalist), HashHacks 5.0 (Aashiyaan), Coordinator – Training & Placement Cell
+(USICT), and NSS Volunteer (SPMC, DU).
+• Certifications: Web Development Bootcamp (Udemy, 2024), Introduction to generative AI (Google), AI Fundamentals
+(IBM SkillsBuild), and Web Development Fundamentals (IBM SkillsBuild).

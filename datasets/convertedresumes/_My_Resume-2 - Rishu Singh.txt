@@ -1,0 +1,50 @@
+Rishu Singh
+§ github.com/Rishu18D # rishusinghmorals@gmail.com (cid:131) +91 9026665674 , Lucknow, India
+Summary
+Motivated MERN Stack Developer with hands-on experience in developing web applications using
+React, Node.js, Express.js, and MongoDB. Proficient in JavaScript, RESTful API integration,
+and version control with Git. Demonstrated ability to design user-friendly web applications
+through academic projects and training. Eager to contribute technical expertise and fresh
+perspectives to a dynamic development team.
+Education
+BBD University June 2024
+Bachelor of Computer Applications (BCA) - Data Science & Artificial Intelligence
+Lucknow, India
+Skills
+Programming Languages: C, Java, Python, JavaScript, HTML, CSS
+Databases: MongoDB, MySQL
+Frameworks and Libraries: React.js, Node.js, Express.js, Bootstrap, Material-UI
+Development Skills: MERN Stack Development, RESTful API Integration, Git, GitHub
+Data Structures & Algorithms: Proficient in Java and Python
+LeetCode Profile: leetcode.com/Rishu1806
+Soft Skills
+Language Proficiency: Fluent in English and Hindi
+Problem-Solving Skills: Applies deductive reasoning, critical analysis, and strategic
+planning to tackle complex challenges
+Adaptability: Demonstrates quick adjustment to new environments, technologies, and
+project demands
+Projects
+MERN E-Commerce Clothing and Attire Website | MERN Stack
+• Implemented secure authentication and authorization using JWT tokens, enhancing user
+data protection by 30%
+• Designed and developed a comprehensive product catalog with advanced search and
+filtering functionalities using React.js and MongoDB, reducing search time by 40%
+• Developed an efficient order management system to handle order processing and database
+interactions with Node.js and Express.js, improving order processing speed by 25%
+• Integrated Stripe API for seamless payment gateway integration, ensuring secure online
+transactions and reducing transaction failures by 15%
+MERN Photo Gallery Website | MERN Stack
+• Implemented image uploads using local storage and Cloudinary integration with React.js
+and Node.js, increasing image upload efficiency by 20%
+• Created a dynamic Cloudinary gallery with advanced image management features,
+enhancing user experience and engagement
+• Managed image uploads and Cloudinary integration, ensuring efficient storage and
+retrieval, reducing storage costs by 10%
+• Utilized React.js for rendering and Cloudinary for optimized image display, improving
+image load time by 25%
+Experience
+Shree Balaji Infotech | MERN Full Stack Project Training February 2024 – May 2024
+• Completed comprehensive training in MERN (MongoDB, Express.js, React.js, Node.js)
+full-stack development
+• Developed an E-commerce application, implementing full-stack solutions using MERN
+technologies, resulting in a 20% increase in application performance

@@ -149,16 +149,16 @@
 
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
+    <a href="/" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="upload.html">Upload</a></li>
-      <li><a href="results.html" class="active">Results</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="resources.html">Resources</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/upload">Upload</a></li>
+      <li><a href="/results">Results</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/resources">Resources</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="upload.html" class="btn btn-outline">Re-analyze</a>
+      <a href="/upload" class="btn btn-outline">Re-analyze</a>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -169,7 +169,7 @@
     <div class="section-label anim-fade-down">Step 3 of 3 — Complete</div>
     <h1 class="anim-fade-up delay-1">Your Analysis Results</h1>
     <p class="anim-fade-up delay-2" style="margin-top:.75rem;">
-      Analyzed for: <span class="badge badge-blue" style="font-size:.85rem;vertical-align:middle;">Data Analyst</span>
+      Analyzed for: <span class="badge badge-blue" id="roleBadge" style="font-size:.85rem;vertical-align:middle;">Detecting...</span>
     </p>
   </div>
 </div>
@@ -177,17 +177,15 @@
 <section class="section-sm">
   <div class="container">
 
-    <!-- Action bar -->
     <div class="action-bar mb-4 anim-fade-up">
-      <p>✅ Analysis complete — your resume was scanned against 2,400+ current job postings.</p>
+      <p id="analysisSuccessMsg">✅ Analysis complete — your resume was scanned against current job market benchmarks.</p>
       <div style="display:flex;gap:.75rem;">
-        <a href="resources.html" class="btn btn-primary">View Learning Resources</a>
+        <a href="/resources" class="btn btn-primary">View Learning Resources</a>
         <button class="btn btn-outline" onclick="window.print()">Export Report</button>
       </div>
     </div>
 
     <div class="results-grid">
-      <!-- Score card -->
       <div class="card score-card anim-scale-in delay-1">
         <div class="gauge-wrap">
           <svg class="gauge-svg" viewBox="0 0 200 200">
@@ -197,46 +195,44 @@
           <div class="gauge-center">
             <div class="score-num" id="scoreNum">0</div>
             <div class="score-denom">/ 100</div>
-            <div class="score-label" id="scoreLabel">Excellent</div>
+            <div class="score-label" id="scoreLabel">Processing...</div>
           </div>
         </div>
 
         <h3 style="margin-bottom:.25rem;">Resume Score</h3>
-        <p style="font-size:.85rem;">Your resume is highly competitive for Data Analyst roles.</p>
+        <p style="font-size:.85rem;" id="scoreDescription">Calculating your competitive edge...</p>
 
         <div class="mini-stat-row">
           <div class="mini-stat">
-            <div class="mini-stat-num text-success">7</div>
+            <div class="mini-stat-num text-success" id="matchedCount">0</div>
             <div class="mini-stat-lbl">Skills Match</div>
           </div>
           <div class="mini-stat">
-            <div class="mini-stat-num text-danger">5</div>
+            <div class="mini-stat-num text-danger" id="missingCount">0</div>
             <div class="mini-stat-lbl">Skills Missing</div>
           </div>
           <div class="mini-stat">
-            <div class="mini-stat-num text-blue">3</div>
+            <div class="mini-stat-num text-blue" id="priorityCount">0</div>
             <div class="mini-stat-lbl">High Priority</div>
           </div>
           <div class="mini-stat">
-            <div class="mini-stat-num" style="color:var(--warning);">4</div>
+            <div class="mini-stat-num" id="suggestionCount" style="color:var(--warning);">0</div>
             <div class="mini-stat-lbl">Suggestions</div>
           </div>
         </div>
 
         <div class="divider"></div>
-        <a href="resources.html" class="btn btn-primary w-full" style="justify-content:center;margin-top:.5rem;">
+        <a href="/resources" class="btn btn-primary w-full" style="justify-content:center;margin-top:.5rem;">
           📚 Start Learning
         </a>
       </div>
 
-      <!-- Right column -->
       <div class="results-right">
 
-        <!-- Tabs card -->
         <div class="card result-section-card anim-fade-up delay-2">
           <div class="tabs">
-            <button class="tab-btn active" data-tab="matched">✅ Matched Skills (7)</button>
-            <button class="tab-btn" data-tab="missing">⚠️ Missing Skills (5)</button>
+            <button class="tab-btn active" id="matchedTabBtn" data-tab="matched">✅ Matched Skills</button>
+            <button class="tab-btn" id="missingTabBtn" data-tab="missing">⚠️ Missing Skills</button>
           </div>
           <div class="tab-content active" id="tab-matched">
             <div id="matchedSkillsList"></div>
@@ -246,7 +242,6 @@
           </div>
         </div>
 
-        <!-- Suggestions -->
         <div class="card result-section-card anim-fade-up delay-3">
           <h3>
             <div class="section-icon" style="background:rgba(245,158,11,.1);font-size:.9rem;">💡</div>
@@ -264,20 +259,20 @@
   <div class="footer-inner">
     <div><img src="assets/logo.svg" alt="HireSight" style="height:28px;margin-bottom:.4rem;"/><p>AI-powered resume skill gap analysis.</p></div>
     <nav class="footer-links">
-      <a href="index.html">Home</a><a href="upload.html">Upload</a>
-      <a href="dashboard.html">Dashboard</a><a href="resources.html">Resources</a>
+      <a href="/">Home</a><a href="/upload">Upload</a>
+      <a href="/dashboard">Dashboard</a><a href="/resources">Resources</a>
     </nav>
   </div>
 </footer>
 
-<script src="js/results.js"></script>
+<script src="/js/results.js"></script>
 <script>
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
   document.getElementById('hamburger').addEventListener('click', () =>
     document.getElementById('navLinks').classList.toggle('open'));
 
-  // Tabs
+  // Tabs toggle logic
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));

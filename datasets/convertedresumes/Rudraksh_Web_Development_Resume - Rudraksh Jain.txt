@@ -1,0 +1,54 @@
+Rudraksh Jain
+rudraksh05jain@gmail.com | +91-7014464806 | LinkedIn | GitHub
+Fullstackdeveloperwithasolidfoundationinalgorithmsandsoftwaredesign, experiencedinbuildingscalablewebapplica-
+tions. Proven ability to deliver real-time collaborative tools, RESTful APIs, and intuitive UIs, alongside mentoring aspiring
+programmers.
+Skills
+Frontend: ReactJS, Context API, Custom Hooks, Tailwind CSS, CodeMirror
+Backend: Node.js, Express, REST APIs, WebRTC, JWT Authentication, MongoDB, WebSockets
+Tools and Practices: TypeScript, Git, Docker (basic), Testing, Agile Methodologies
+Core CS: Data Structures, Algorithms, Competitive Programming
+Soft Skills: Communication, Leadership, Teamwork, Problem Solving
+Education
+Bachelor of Technology, Information Technology
+Maharaja Surajmal Institute of Technology, Delhi
+(Expected Graduation: 2026)
+Projects
+ScryptSync – Real-Time Collaborative Code Editor
+React, TypeScript, Node.js, MongoDB, Yjs, WebRTC, CodeMirror, Tailwind CSS
+• Supported 20–30 concurrent users per room enabling smooth collaboration.
+• Achieved sub-200ms synchronization latency to maintain real-time responsiveness.
+• DevelopedaReact-basedfrontendfeaturingsyntaxhighlighting, undo/redo, andlivecursorindicatorsusingCodeMir-
+ror.
+• Built a Node.js/Express backend managing persistent sessions, room management, and WebRTC signaling for peer-
+to-peer connections.
+• Applied Yjs CRDT and WebRTC/WebSocket for conflict-free, real-time document syncing.
+• Implemented granular role-based access controls for interviewers, mentors, and participants.
+• Demo Video
+• GitHub
+Second Brain – Personal Knowledge Management Web App
+React, TypeScript, Node.js, MongoDB, JWT Authentication, Tailwind CSS
+• Created a full-stack platform to collect, tag, and filter notes, videos, and tweets for efficient personal knowledge
+organization.
+• Designed modular React components using Context API and Zustand for streamlined state management.
+• Developed secure RESTful backend APIs with JWT-based authentication and middleware for access control.
+• Focused on delivering data integrity, user security, and high query performance.
+• GitHub Repositories: Frontend | Backend
+Experience
+Teaching Assistant, Coding Blocks May 2024 – July 2025
+• Mentored over 150 students in data structures, algorithms, and programming essentials for competitive exams and
+placements.
+• Delivered lectures and led doubt clearing sessions supporting 500+ learners, fostering better understanding and
+engagement.
+• Conducted problem-solving discussions to help 100+ students improve coding skills on Leetcode, Codeforces, and
+Codechef.
+• Moderated and managed a Discord community dedicated to peer learning and timely doubt resolution.
+Achievements
+• Leetcode Knight (Top 2%), Max Rating: 2064 • 2nd place – IEEE MSIT Code Combat
+• Codechef 3-Star (1774) • 5th place – CodeKaze, DTU
+• Codeforces Pupil • TCS Codevita Round 1 (Global Rank 4109)
+Certifications
+Data Structures and Algorithms – Coding Blocks
+Extracurricular Activities
+• Junior Core, Tark Literary Society – helped organize first college literature fest with 300+ participants.
+• General Secretary, RAS MSIT – published robotics newsletter and hosted Arduino workshop for new members.

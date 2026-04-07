@@ -1,0 +1,52 @@
+<SAAHIL Kolkata,West Bengal,
+India
+saahilkataria1@gmail.com
+https://saahilkataria.com/
+KATARIA>
+www.linkedin.com/in/saah
+il-kataria
+Motivated Machine Learning Engineer with knowledge in NLP, LLMs, and Deep Learning. Familiar with
+DevOps tools such as Git, DVC, Docker, Jenkins, and Ray, along with pipeline monitoring using WhyLogs
+and EvidentlyAI. Capable of working with big data frameworks like PySpark and SparkSQL, and
+deploying scalable machine learning models.
+PROJECTS EDUCATION
+Torch Ensemble-Based Microscopic Fungi BTech in Computer Science & Engineering
+Classification (Data Science)
+MCKV Institute of Engineering
+Built a PyTorch K-fold ensemble model for 2020 - 2024
+microscopic fungi classification using custom
+CNN architecture, data augmentation, and Higher Secondary Examination
+stratified cross-validation. Apeejay School Park Street
+2020
+Deployed the model as an API using FastAPI,
+allowing users to upload images and receive Secondary Examination
+predictions. Don Bosco Liluah
+2018
+Abalone Age Estimation using LGBM and
+PostgreSQL SKILLS & PROFICIENCIES
+Developed a web-based application for Scikit-learn, XGBoost, CatBoost,
+abalone age estimation using a pre-trained LightGBM
+LightGBM model (Optuna for HP tuning) .
+TensorFlow, PyTorch, , PyTorch
+Integrated FastAPI, PostgreSQL for storing
+Lightning , Keras , ARIMA
+predictions, Jinja2 templates for web pages,
+Pandas, NumPy, Matplotlib, Seaborn,
+and Evidently.ai for data drift monitoring.
+Plotly , Optuna , Albumentations
+The app allows users to input features and AWS (SAAC02 Certified)
+receive predictions with stored results for MLflow, Weights & Biases (W&B)
+future review.
+Flask, FastAPI , Gradio
+MySQL, PostgreSQL
+Advanced DeBERTa-Powered Language
+Git , DVC , Docker-Compose , Jenkins ,
+Identifier with Gradio Interface
+Docker , Ray
+Developed a robust language identification WhyLogs , EvidentlyAI
+system using a fine-tuned pre-trained PySpark , SparkSQL
+DeBERTa model. Integrated Gradio for a
+user-friendly web interface that allows users
+</MACHINE LEARNING
+to input text and receive language
+predictions. ENGINEER>

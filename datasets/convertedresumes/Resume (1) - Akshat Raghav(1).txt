@@ -1,0 +1,53 @@
+AKSHAT RAGHAV
+(cid:239)linkedin.com/in/akshat-raghav | (cid:131)+91-8920418132 | #aki.raghav2002@gmail.com
+PROFESSIONAL SUMMARY
+Data-drivenanalyticsprofessionalwithexperienceinproductanalytics,dataanalysis,andcompliance. Skilledintransform-
+ingcomplexdatasetsintoactionableinsightsusingSQL,Python,Excel,andvisualizationtools. Experiencedinstakeholder
+collaboration, A/Btesting, andprocessoptimization. SeekingopportunitiesinDecisionAnalytics, DataAnalysis, Business
+Analysis,ProductAnalytics,MIS,andConsulting.
+CORE SKILLS
+Decision & Data Analytics: SQL, Statistical Analysis, Predictive Modeling, Data Validation, Data Cleaning, Quantitative
+Analysis
+Product & Business Analytics: Business Analysis, Stakeholder Management, Process Optimization, A/B Testing, Product
+LifecycleSupport
+Reporting & Visualization: Power BI, Advanced Excel, Dashboard Development, KPI Tracking, Business Reporting, Data
+Visualization
+Tools&Technologies: SQLServer,Jira,Figma,AgileScrum,.NETFramework,C#,HTML,CSS,JavaScript
+ProfessionalSkills: AnalyticalThinking,Communication,Collaboration,ClientInteraction,Decision-Making,Attentionto
+Detail
+WORK EXPERIENCE
+Paytm | ProductAnalyst Noida | Jan2026–Present
+• Enabled a Green onboarding workflow for international LLA projects (Puerto Rico/Jamaica), optimizing the customer
+journeyfromproductselectiontopaymentandverification.
+• Supported product lifecycle planning, QA validation, and executed A/B testing to compare legacy C2C versus Green
+processes,drivingmeasurableconversionimprovements.
+• Designed Figma wireframes and managed Jira tickets within an Agile Scrum environment, collaborating with cross-
+functionaldevelopmentandQAteamsforreleaseexecution.
+UnitedLex | CyberIncidentResponse|Quality&Compliance Gurgaon | Sept2025–Nov2025
+• Manageddatabreachreviewsandclassifiedsensitiveenterprisedata(PII,PHI,PCI)usinglegalframeworks.
+• ExecutedQA/QCdatadiscoveryworkflowsusingRelativitytoolstoensurecompliancewithglobaldataregulations.
+NBCC(India)Limited | Data&ProcessAnalyticsIntern NewDelhi | Feb2025–June2025
+• Automated internal workflows and translated business requirements into analytical solutions to improve operational
+efficiency.
+• Developeddata-driventrackingsystemsthatimprovedreportingtransparencyandoperationalworkflowmanagement.
+ANALYTICS PROJECTS
+OlympicPerformanceAnalytics SQL,PredictiveModeling
+• Analyzed120+yearsofOlympicdatasetsusingSQLtoidentifyperformanceinsights,developinganalyticalmodelsthat
+achieved92%forecastingaccuracyformedalpredictions.
+• Createdinteractivedashboardsandvisualinsightstosupportdata-drivendecision-makingandperformanceanalysis.
+RealEstateInvestmentAnalytics Python,BusinessInsights
+• Performeddataanalysisandbuiltpredictivemodels(LinearRegression&RandomForest)achievinganR2 scoreof0.88
+toidentifypropertyinvestmenttrends.
+• Designedvisualization-driveninsightssupportingbusiness-orientedrealestateinvestmentdecisions.
+EDUCATION
+BharatiVidyapeeth’sCollegeofEngineering NewDelhi
+B.Tech–Electronics&CommunicationEngineering|Minor: AI&MachineLearning 2021–2025|CGPA:7.8/10
+MaxfortSchool NewDelhi
+ClassXII(CBSE):84% | ClassX(CBSE):92% 2021&2019
+LEADERSHIP & CERTIFICATIONS
+Certifications: Master Data Management (TCS) | Data Analytics Using Python (IBM) | Forward Program (McKinsey) |
+DataAnalytics(Udemy)
+Event Management Head (EDC): Led a 10-member team executing entrepreneurship events and workshops, increasing
+overallparticipationby25%.
+OrganizingCommittee(XTASY):Coordinatedlogisticsfor2000+attendees,improvingworkflowefficiencythroughstruc-
+turedprocesscoordination.

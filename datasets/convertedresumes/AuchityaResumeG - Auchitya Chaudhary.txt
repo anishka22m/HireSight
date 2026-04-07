@@ -1,0 +1,50 @@
+Auchitya Chaudhary
+New Delhi, India
+(cid:131) +91 9599217967 # auchitya2410@gmail.com (cid:239) linkedin.com/in/auchitya-ch § github.com/auchitya-cloud
+Technical Skills
+Languages: C/C++,Java, Python, SQL (Postgres), JavaScript, HTML/CSS
+Frameworks and Libraries: React, Node.js, Express.js, Pandas, NumPy, Matplotlib, Sklearn, Scipy
+Relevant Coursework: Data Structures and Algorithm, System Design, Operating System, DBMS, AI/ML, OOPS
+Tools: Github, Docker, VS Code, Jupyter Notebook
+Experience
+Software Engineer Intern October 2024 – December 2024
+Bluestock Fintech Remote
+• Optimized internal financial APIs with Express.js & PostgreSQL in an Agile environment, applying system
+design principles to improve scalability and reliability.
+• Enhanced RESTful services for 2k+ tickers, reducing latency by 30% and enabling higher concurrency for
+business-critical dashboards.
+Technical Supervisor May 2022 – April 2024
+National Service Scheme, MSI New Delhi
+• Built and shipped a production-ready web portal (events, attendance, profiles) using JavaScript & SCSS.
+• Mentored 5 developers through pull requests and code reviews, improving deployment efficiency by 20%.
+Projects
+Code Quest | React, D3.js, Node.js, Express.js, PostgreSQL, Firebase, Monaco Editor Link
+• Spearheaded development of a full-stack learning platform with algorithm visualizations, AI study planner, and
+collaboration features, improving comprehension and peer engagement across 5+ integrated tools.
+• Implemented scalable backend services and modular front-end components, ensuring smooth system
+integration and extensibility.
+HarmoniX | Deep Learning(RNN), React, D3.js, Node.js, Express, PostgreSQL, MusicGen Link
+• Engineered a custom AI-powered music application combining prompt-based generation, real-time pitch/timing
+analysis, and practice tools to automate and enhance user workflows.
+• Integrated and fine-tuned MusicGen with LoRA on custom datasets, reducing output errors by 60% and
+improving alignment with user input.
+NeuroLearn | Agentic AI(using OpenAI API), HTML, CSS, JavaScript Link
+• Crafted a platform with 3+ AI-driven features designed for neurodivergent students using OpenAI API.
+• Designed an agentic chatbot for doubt solving, AI curriculum assistant for smart study plans, text-to-speech interface
+for dyslexic users, and gamified leaderboard to enhance engagement.
+Education
+University School of Information Communication and Technology, GGSIPU 2024 – 2026
+Master of Computer Applications (Software Engineering) CGPA: 9.3
+Maharaja Surajmal Institute 2021 – 2024
+Bachelor of Computer Applications (Minor in Data Science) CGPA: 9.6
+Certifications and Achievements
+• Participated in 5+ hackathons and secured 2nd Place at Hack-Verse held at Sri Venkateswara College (DU),
+competing against 100+ teams.
+• Codolio : Achieved max rating of 1691 (Top 10%) on LeetCode and 1300+ on Codeforces, demonstrating
+strong problem-solving and algorithmic skills.
+• Consistently ranked top 5 in BCA (240 students) and MCA (120 students) for academic excellence.
+• Leadership Roles: Head of PR (CSI), DSA Team Lead (Google Developer Group), Project Head (Indriya NSS);
+led 8+ students, organized 15+ events, and ran tech projects for inclusive education.
+• Certification – IBM SkillsBuild Certification in Data Analytics & Data Science
+• Certification – Data Science Summer Research School by SSCBS, DU & Android Connectz, led 5 Image
+Processing & NLP projects and received the Consistency Award.

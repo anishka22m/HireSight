@@ -122,16 +122,16 @@
 
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="upload.html">Upload</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="dashboard.html" class="active">Dashboard</a></li>
-      <li><a href="resources.html">Resources</a></li>
-    </ul>
+    <a href="/" class="nav-logo"><img src="assets/logo.svg" alt="HireSight"/></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/upload">Upload</a></li>                       
+        <li><a href="/results">Results</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/resources">Resources</a></li>
+      </ul>
     <div class="nav-cta">
-      <a href="upload.html" class="btn btn-primary">Analyze Resume</a>
+      <a href="/upload" class="btn btn-primary">Analyze Resume</a>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -141,7 +141,6 @@
   <div class="container">
     <div class="section-label anim-fade-down">Live Market Intelligence</div>
     <h1 class="anim-fade-up delay-1">Skill Trends Dashboard</h1>
-    <p class="anim-fade-up delay-2" style="margin-top:.75rem;">Real-time demand data from 50,000+ job postings across the tech industry.</p>
   </div>
 </div>
 
@@ -309,14 +308,14 @@
   <div class="footer-inner">
     <div><img src="assets/logo.svg" alt="HireSight" style="height:28px;margin-bottom:.4rem;"/><p>AI-powered resume skill gap analysis.</p></div>
     <nav class="footer-links">
-      <a href="index.html">Home</a><a href="upload.html">Upload</a>
-      <a href="dashboard.html">Dashboard</a><a href="resources.html">Resources</a>
+      <a href="/">Home</a><a href="/upload">Upload</a>
+      <a href="/dashboard">Dashboard</a><a href="/resources">Resources</a>
     </nav>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="js/charts.js"></script>
+<script src="/js/charts.js"></script>
 <script>
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));

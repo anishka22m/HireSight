@@ -1,0 +1,67 @@
+OBJECTIVE
+
+‘A motivated Electronics & Instrumentation Engineering student with strong knowledge of the
+hardware development lifecycle, embedded systems, sensors, and control systems. Skilled in C, Java,
+Python, and MATLAB, with hands-on experience in Arduino and Raspberry Pi projects integrating real-
+time data acquisition and cloud connectivity. Experienced in microcontroller interfacing, circuit
+design, and automation-focused problem solving, with a keen interest in contributing to innovative
+hardware development, schematic design, and board-level testing.
+
+EXPERIENCE
+Embedded Intern - TechnoFly Solutions FEB 2026 - Present
+‘+ Developed firmware in Embedded C for mierocontroller-based systems with direct register-level
+configuration.
+‘+ Worked on Arduino, ESP32, and Raspberry Pi platforms for real-time hardware interfacing and control
+applications.
+
+‘+ Implemented peripheral drivers using GPIO, ADC, PWM, Timers, and Interrupts.
+
+‘+ Designed and integrated communication interfaces including UART, I2C, and SPI for sensor and module
+Interaction.
+
+‘+ Interfaced analog and digital sensors; performed signal acquisition and processing,
+
++ Designed basic hardware circuits and validated functionality through systematic debugging and
+testing.
+
+‘+ Debugged firmware using serial communication logs and hardware-level troubleshooting,
+
++ Developed loT-enabled embedded prototypes with wireless communication capabilities (Wi-
+Fi/Bluetoothy,
+
+‘+ Gained foundational knowledge of RTOS concepts, task scheduling, and resource management.
+
+‘+ Performed end-to-end system validation including integration testing and performance optimization.
+
+PROJECTS
+Arduino-based Fire Detection System (lo)
+
+* Built an Arduino-based fire detection system using a flame sensor with real-time alert
+triggering.
+
++ Developed embedded C code for sensor data processing and alert activation.
+Integrated and tested hardware components (sensor, buzzer, Arduino) on a breadboard.
+
+* Validated system performance through real-time testing and demonstration
+
+Heart Rate Monitoring System using ThingSpeak
+
+* Developed an loT heart-rate monitoring system that uploads pulse data to ThingSpeak in
+real time.
+
+* Interfaced heart sensor with Arduino and implemented HTTP-based cloud data upload.
+
+Ensured accurate acquisition, transmission, and dashboard visualization of health data.
+
+* Conducted system testing for reliability and end-to-end monitoring performance.
+Soler owered feet Tomato Mentoring & Cineiicaton (Beep Lanming+ to)
+
+* Built a deep-learning model using ResNetSO and InceptionV3 to classify tomato health
+status.
+
+* Performed dataset preprocessing, augmentation, and 90:10 training-testing split.
+
+* Improved accuracy through tuning and evaluation using confusion matrix and F1-score.
+
+* Developed a scalable loT-enabled framework for automated agricultural monitoring.
+

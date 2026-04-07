@@ -1,0 +1,67 @@
+EDUCATION
+2021 — 2025. B.Tech. in Information Technology
+
+Technical Secretary, Student Council; Lead Organizer, Annual Tech Fest (CGPA: 8.5/10)
+
+2019 — 2021 (95%)
+2019 (80%)
+RESEARCH EXPERIENCE
+
+Research Intern, University of Cambridge (Remote) Sep 2025 — Present
+Supervi: Dr. Amparo Giiemes, Division of Electrical Engineering
+
+— Developing a robust analytical pipeline to process multimodal physiological data (including glucose
+levels) and identify biomarkers related to epileptic seizures.
+
+~ Investigating temporal features for biomarker discovery to distinguish short-term (pre-ictal) and
+long-term predictors of seizure events from patient data.
+Analyzing the post-ictal impact of seizures on physiological metrics and evaluating the effects of
+neuromodulation by comparing pre- and post-stimulation data, using synthetic data generation to
+ensure framework robustness.
+
+Research Intern, Indian Institute of Technology Kharagpur (Remote) 2024
+
+— Achieved 91% classification accuracy for a 3-class motor imagery BCI task (Focus, Left, Right),
+enabling real-time control of a VR rehabilitation game on Oculus Quest
+Implemented an end-to-end BCI pipeline in OpenViBE using ICA for artifact removal, Common
+Spatial Patterns (CSP) for feature extraction, and a low-latency TCP bridge to Unity.
+
+~ Designed 5 progressive VR therapy levels and authored modular OpenViBE scenarios to ensure
+system usability, reproducibility, and support for future research.
+
+PUBLICATIONS
+
+Intelligent Sustainable Multi-Agent Coordination (ISMAC): A Multi-Objective
+
+Optimization Framework for Resilient Supply Chains
+
+Submitted to, Annals of Operations Research
+
+— Multi-agent system with 13 agents integrating blockchain, loT, ARIMA/LSTM forecasting,
+and multi-objective optimization (NSGA-I]) with 10+ real-time APIs (e.g., Carbon Interface,
+OpenRouteService, GDACS).
+Validated across 7 scenarios and 7,000+ runs; ANOVA F(42, 6958) = 23.7, p < 0.001; 31% COve
+reduction (584 vs. 847 tCOye) at 94.3% service levels; 82% traceability via explainable AI.
+
+Perfect Fit: Augmented Reality Wrist Watch
+
+International Journal for Innovative Engineering and Management Research
+
+Author ra Babu Reddy, Dr. N. Veeranjaneyulu, M. Rishyanth Reddy, Satti Avinash Reddy
+
+DOr
+
+— AR watch try-on application enabling real-time virtual visualization of watch models, streamlining
+e-commerce evaluation and reducing reliance on in-store trials.
+
+Work EXPERIENCE
+
+Founder & CEO, LifeTrx (InsightPro) Jan 2024 — Dec 2024
+Built an Al-powered smart-glasses prototype for the visually impaired (object detection, scene/text
+readout, guidance) optimized for on-device, low-latency edge inference.
+
+— Led a 4-member core team across engineering, product, and research; delivered competitive
+analysis, user studies, and go-to-market materials for assistive-tech stakeholders.
+
+— Nominated for an EU-supported Social Impact Award for innovation in accessibility.
+

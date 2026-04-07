@@ -1,0 +1,36 @@
+Sneha Rawat
+Education
+Master of Computer Applications (Software Engineering) 2024 – 2026
+USICT, GGSIPU CGPA: 9.20 / 10
+Bachelor of Computer Applications 2020 – 2023
+Gautam Buddha University CGPA: 9.22 / 10
+Projects
+Customer Feedback Analyzer
+Python, NLP, Scikit-learn, NLTK, Pandas, NumPy, Matplotlib
+• Developed end-to-end NLP pipeline to classify customer reviews into Positive, Neutral and Negative senti-
+ments.
+• Applied preprocessing: tokenization, stopword removal, lemmatization and noise cleaning (URLs, emojis,
+hashtags).
+• Extracted features using TF-IDF (uni-gram + bi-gram) vectorization.
+• Trained Logistic Regression, Naive Bayes and Linear SVM; selected best model via validation F1-score.
+• Used stratified split and k-fold cross validation to improve generalization; achieved 87% accuracy.
+• Generated confusion matrix and visualized sentiment trends using Matplotlib.
+LinkUp — Real-Time Chat Application
+ReactJS, NodeJS, Express.js, MongoDB, Socket.io
+• Built full-stack real-time chat supporting personal and group messaging via WebSockets.
+• Implemented JWT authentication, typing indicators and online/offline presence detection.
+• Designed REST APIs and stored persistent chat history in MongoDB.
+Technical Skills
+Languages: C++, Python, JavaScript, SQL
+Frontend: React.js, HTML, CSS
+Backend: Node.js, Express.js
+Databases: MongoDB, MySQL
+Libraries: scikit-learn, pandas, NumPy, NLTK, Matplotlib
+Core CS: DBMS, OOPs, OS, CN, DSA, Machine Learning
+Achievements
+• Solved 200+ Data Structures and Algorithms problems on LeetCode
+• Merit Scholarship for Academic Excellence
+Certifications
+• IBM Project-Based Learning — JavaScript, HTML5, CSS, React
+• 30 Days of Code — DSA (C++) and AI/ML (Python)
+1

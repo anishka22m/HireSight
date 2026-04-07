@@ -1,0 +1,51 @@
+RAHUL JANGIR
+M.C.A. - Software Engineering
+Ph: +91-9602093589
+Email: rahuljangir2002@gmail.com
+Faridabad, Haryana, India - 121003
+BRIEF SUMMARY
+My key areas of expertise include strong programming skills in C++ and a solid foundation in problem-solving, which form the core of
+my software development capabilities. I also have practical knowledge of Python, supported by hands-on experience with essential
+data and machine learning libraries such as NumPy, Pandas, SciPy, Scikit-Learn, and Matplotlib. In addition, I possess foundational
+knowledge of SQL and data analytics, complementing my understanding of artificial intelligence and machine learning concepts.
+Strengthening my technical expertise is a solid background in engineering mathematics, gained during my graduation, which enhances
+my analytical and computational thinking across multiple domains.
+KEY EXPERTISE
+C++ Data Structures Python Data Analysis Machine Learning Artificial Intelligence Scikit-Learn NumPy
+Pandas Matplotlib SciPy
+EDUCATION
+University School of Information, Communication and Technology, GGSIPU 2024 - 2026
+M.C.A. - Software Engineering | CGPA: 8.47 / 10
+Motilal Nehru College, University Of Delhi 2020 - 2023
+B.Sc. Hons. - Physics - Physics (Full Time) | CGPA : 8.18 / 10
+Dalmia Vidya Mandir, Chirawa 2020
+12th | CBSE | Percentage: 92.80 / 100
+Dalmia Vidya Mandir, Chirawa 2018
+10th | CBSE | Percentage: 90 / 100
+PROJECTS
+Credit Card Fraud Detection 03 Feb, 2025 - 10 Apr, 2025
+Key Skills: Machine Learning Logistic Regression Random Forest Scikit-Learn Pandas NumPy Python
+Built a machine learning model to detect fraudulent credit card transactions by analyzing historical transaction patterns. Addressed
+severe class imbalance and optimized the model for both precision and recall to minimize false positives while capturing maximum fraud
+cases. Implemented data preprocessing, feature scaling, and model evaluation using advanced ML techniques.
+POSITIONS OF RESPONSIBILITY
+Secretary
+Elected as the Secretary of the Anusandhan Physics Society, I was responsible for coordinating academic and co-curricular activities,
+including organizing seminars, workshops, and annual fests. I managed communication between faculty and students, ensuring smooth
+execution of all society events.
+Core Member TNP Operations Team
+As a core member of the Operations Team in the Training and Placement Cell, I actively contributed to the smooth execution of campus
+recruitment drives by coordinating with recruiters, students, and faculty. I was involved in managing logistics, scheduling, and
+communication to ensure seamless operations. My role strengthened my organizational, teamwork, and problem-solving skills in a
+dynamic environment.
+PERSONAL INTERESTS / HOBBIES
+Solving Coding Problems
+Playing Chess
+Watching Cricket
+PERSONAL DETAILS
+Gender: Male Date of Birth: 07 Sep, 2003
+Marital Status: Single Known Languages: Hindi, English
+Current Address: House no. 8 Block No. 5, Spring Field Colony, Permanent Address: Manoj Furniture House, Surajgarh Road,
+Sector 31-32, Faridabad, Haryana, India - 121003 Chirawa, Chirawa, Rajasthan, India - 333026
+Phone Numbers: +91-9602093589, +91-9602093589
+Emails: rahuljangir2002@gmail.com , rahulgothriwal@gmail.com

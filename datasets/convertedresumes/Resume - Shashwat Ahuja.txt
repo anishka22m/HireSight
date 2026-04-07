@@ -1,0 +1,63 @@
+Shashwat Ahuja
+(cid:131) +91 7683016800 § github.com/msr8 # shashwat.ahuja.2004@gmail.com
+Education
+National Forensic Sciences University Curti, Goa (2025 - Current)
+M.Sc. Cyber Security
+Maharaja Surajmal Institute New Delhi (2022 - 2025)
+Bachelor of Computer Applications CGPA: 8.691
+New Era Public School Class XII Percentage: 74.8%
+New Delhi, India (2010 - 2022) Class X Percentage: 77%
+Experience
+Robotic Process Automation Intern Jul’24 – Aug’24
+Xtreme Softech Gurgaon, Haryana
+• Designed and implemented a Python and .NET based automation solution to parse and process emails
+• Developed the bot to automatically save email content into separate Google Documents based on user-inputted
+conditions
+• Integrated the bot with UIPath to schedule and execute the automation at predefined intervals
+Extra-Curricular Courses/Activities
+(cid:18) IBM Machine Learning Professional Certificate
+• This course included EDA, Supervised & Unsupervised Machine Learning, Deep Leaning, Reinforcement Learning, and
+Model Deployment
+Organiser and Participant of various hackathons
+• Achieved a top-15 position in a national hackathon (Code Cubicles 2.0). Also organised and hosted a hackathon at
+Microsoft’s Gurgaon office (Hackformers)
+Technical Skills
+Skills: Machine Learning & Artificial Intelligence, Data Science & Analytics, Backend & API Development, Robotic Process
+Automation
+Languages: Python, Bash, HTML/CSS/JS
+Databases: MySQL, MongoDB
+Tools: Linux, Git/Github, Docker, UIPath, Jupyter Notebook/Lab, LATEX
+Python libraries: Scikit-Learn, Tensorflow, Keras, Pandas, Numpy, Matplotlib, Flask, Flask-RESTful, Django
+Projects
+§ Synapse | Showcase | Python, Flask, Scikit-Learn, Bayesian Optimization
+• Engineered a full-stack real-time ML platform enabling the automation of ML workflows
+• Integrated Bayesian Optimization to autonomously tune hyperparameters for diverse models
+• Implemented an automated EDA pipeline generating insightful and interactive visualizations
+• Developed a robust customisable preprocessing engine with intelligent missing value handling, feature selection, and
+scaling
+• EmbeddedanAI chatbottoprovidedata-driveninsightsandstatisticalinterpretationsfortechnicalandnon-technicalusers
+§ Machine Minds | Source Code | Python, Flask, Scikit-Learn, Matplotlib, Javascript
+• Designed an attractive game-based learning platform for machine learning concepts
+• Developed engaging quizzes to test the user’s knowledge
+• Created interactive visualizations to help users understand the role of hyperparameters
+• Authored user-friendly guides on various machine learning topics
+• Established a forum for users to seek assistance and engage with the community
+• Integrated Google OAuth to simplify and streamline the login process
+§ Markify | PyPI | Python, Markov Chains, NLTK
+• Engineered a command-line application, Markify, leveraging Python to extract and analyze data from social media
+accounts
+• Employed NLTK for meticulous data sanitization
+• Demonstrated proficiency in interfacting with a variety of APIs (official and unofficial) to aggregate data
+• Employed the use of the markov chains for generating new sentences
+• Packaged the application for widespread use by uploading it to PyPI
+§ Spotify Recommender | DockerHub | Python, Django, Skicit-Learn, MongoDB, Docker, HTML+CSS+JS
+• Developed a spotify scraper and a corresponding website enabling users to receive personalized recommendations based
+on Spotify track links or IDs
+• Utilized a custom optimized K-Nearest Neighbors algorithm for recommendation generation
+• Implemented MongoDB as the database backend for efficient data storage and flexible querying capabilities
+• Containerized the web server using Docker for seamless deployment and execution across diverse environments
+• Leveraged the Spotify API to scrape the audio features of over 7 million songs
+• Implemented robust error handling within the scraper as to prevent interruptions due to errors during operation, thereby
+ensuring continuous operation over extended durations without interruptions
+• Demonstrated adeptness in utilizing both, official and unofficial APIs for data acquisition
+• Designedaminimalist yet responsive frontendinterface, prioritizingusabilityandsimplicitywithoutunnecessaryclutter

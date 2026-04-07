@@ -1,0 +1,62 @@
+Ld
+
+CO) Co Linkedin | GitHub
+
+PROFESSIONAL SUMMARY
+
+Second:-year CSE student at [———Twith strong foundations in Java, Python, and C/Ce+, Skilled in
+problem-solving, cross-platform development, and applied AI/foT. Experienced with modern Al frameworks,
+software, Al, and systems
+
+EDUCATION
+Bachelors in Technology - Computer Science and Engineering (CGPA-8.6) ‘August 2024 - Present
+
+PROJECTS/EXPIRIENCE
+Project 1: Suryen | Al-Powered Productivity Overlay Assistant
+
++ Built a cross-platform desktop Al assistant (Python, Flet, Firebase) with a screen overlay to deliver real-
+
+time Q&A, webpage parsing, and audio transcription without context switching
+
+Integrated Faster-Whisper to transcribe YouTube videos and live audio; used yt-dlp for media extraction
+
+and Firebase Realtime DB for trending news feeds.
+
+Engineered a multi-threaded, event-driven architecture with watchdog, ensuring low-latency, non-
+
+blocking Ul across Windows/Linux/macOS.
+
++ Role: Sole developer - delivered end-to-end design and implementation, demonstrating full-stack product
+development under hackathon timelines.
+
+Project 2: Alt+Art | Human vs Al Creative Platform
+
++ Developed an interactive art platform where users upload images, generate Al reimagining (Imagen + Gemini
+2.5 Flash), and vote in real time.
+
++ Implemented Supabase backend for authentication, image storage, and live community
+voting/leaderboards.
+
++ Delivered a production-ready MVP in 48 hours, showcasing rapid prototyping, full-stack integration, and,
+Al-driven creative tools.
+
++ Role: Sole developer — executed all stages (model integration, backend, frontend), highlighting creativity +
+
+pplied ML skills.
+
+Project 3: AniDiet | Anime-Themed Al Diet Planner
++ Built a gamified wellness app with Flet (Python + Flutter) using Mistral Al for personalized diet plans.
+
+«+ Integrated Firebase Realtime DB for syncing user data, streak tracking, and friend challenge leaderboards.
++ Boosted engagement with anime visuals, daily streaks, and social gamification.
+
++ Solo developer: designed UI, integrated models, and deployed full solution for Al-driven healthcare.
+
+TECHNICAL SKILLS
+Languages | Python, Java, C/C++
+
+Frameworks / Platforms | Firebase, Supabase, Google Cloud Console, Flet
+Developer Tools | Git, Visual Studio Code, Eclipse
+
+Libraries | Pandas, NumPy, Transformers, PyTorch
+

@@ -1,0 +1,41 @@
+SAINATH PATIL
+Pune, India | +91 8888282215| sainathpatil6412@gmail.com Linkedin
+EDUCATION
+D.Y. PATIL COLLEGE OF ENGINEERING AKURDI, PUNE 2020-2023
+Bachelor in Civil Engineering CGPA – 8.70
+INSTITUDE OF CIVIL AND RURAL ENGINEERING GARGOTI, KOLHAPUR 2017-2020
+Diploma in Civil Engineering Percentage – 95.37%
+SOLANKUR HIGH-SCHOOL SOLANKUR 2015-2016
+Secondary School Education Percentage – 91.20%
+WORK EXPERIENCE
+KPMG FORAGE PROGRAM Remote
+Data Analyst Intern May 2023 - June 2023
+● Built PowerBi dashboard to visualize core business KPIs (e.g. Monthly Recurring Revenue), saving 10 hours per week
+of manual reporting work
+● Assessed data quality and completeness in preparation for analysis
+● Analysed data to target high-value customers based on demographics and attributes
+TATA FORAGE PROGRAM Remote
+Data Analyst Intern July 2023- Aug 2023
+● Completed a simulation involving creating data visualizations for Tata Consultancy Services
+● Created visuals for data analysis to help executives with effective decision making
+PROJECTS
+PROVIDE INSIGHTS TO THE REVENUE TEAM IN THE HOSPITALITY DOMAIN Sep 2023
+● Led a data analytics project to analyze AtliQ Grands historical data and uncover revenue boosting insights
+● Recommended data driven strategies to optimize pricing and marketing, projected to increase revenue by 15%
+● Designed and developed a custom dashboard to track key performance indicators and visualize trends
+CERTIFICATIONS
+SQL Beginner to Advanced for data Professionals Codebasics
+Power Bi for Beginners Simplilearn
+Introduction to data Analytics Simplilearn
+Introduction to SQL Simplilearn
+TECHNICAL SKILLS
+PowerBI Data Visualization Dashboard Design Business Intelligence Power Query
+Data Modeling DAX Power BI Service SQL Macros
+Excel Database Management Query Optimization Data Retrieval Data Manipulation
+Excel Formulas & Functions Data Sorting Filtering Data Data Analysis
+SOFT SKILLS
+Analytical Thinking & Problem Solving
+Communication & Storytelling
+Collaboration & Teamwork
+Critical Thinking & Creativity
+Project Management & Organization

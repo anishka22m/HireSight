@@ -1,0 +1,57 @@
+Soumya Shubham Email: soumyashubham1@gmail.com
+Mobile: +91 9599808733
+LinkedIn || GitHub
+Delhi, IN
+EDUCATION
+Maharaja Surajmal Institute, GGSIPU December 2021 – June 2024
+Bachelor of Computer Applications (Hons) - CGPA: 8.78 Delhi, IN
+Kendriya Vidyalaya Andrews Ganj April 2020 – June 2021
+Central Board of Secondary Education, XII - Percentage - 85 Delhi, IN
+WORK EXPERIENCE
+Analyst (HCLTech) January 2025 – Present
+ Utilized the Incident Management System for incident logging, root-cause identification & coordination with cross-functional teams
+ Got hands-on experience with different tools such as Solarwinds, Moogsoft, Team Dynamix, Excel, SCOM
+ Regularly updated SOPs and runbooks to improve operational efficiency
+ Maintained detailed documentation of monitoring activities and system behaviors to support audits
+Investigated CASB and XDR security activities, suspended illegitimate user accounts, and raised security incidents in accordance
+with organizational protocols.
+Machine Learning (Data Science) Intern (Feynn Labs) || LINK August 2024 – October 2024
+ Developed and implemented machine learning models using Python and its libraries
+ Collaborated with stakeholders under guidance and mentorship to address real-world challenges
+ Gained hands-on experience in data analysis while performing different projects
+Data Science Intern (Open Weaver) || LINK September 2023 – October 2023
+ Gained practical knowledge of machine learning and data processing by implementing them in the capstone project
+ Learned to apply statistical modeling to interpret and derive insights from data, enhancing decision-making.
+Data Science Intern (Tech-A-Intern) || LINK August 2023 – September 2023
+ Responsible for collecting and preprocessing data in order to gather useful insights from the preprocessed data
+ Designed and implemented predictive models using Python and its libraries
+SKILLS SUMMARY
+ Languages: Python, C++, SQL, Java
+ Frameworks: Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn
+ Tools: MySQL, Excel, GitHub, Solarwinds, Moogsoft, Team Dynamix, System Center Operations Manager
+ Platforms: Google Colab, Jupyter Notebook, Visual Studio Code, PyCharm, IntelliJ IDEA
+ Soft Skills: Communication, Teamwork, Leadership, Adaptability
+PROJECTS
+MedVision Pro || LINK
+ Automates disease diagnosis and provides medications, precautions, and diet based on patient symptoms.
+ Built using machine learning and data analytics, deployed via Streamlit with an interactive and user-friendly interface.
+Customer Segmentation || LINK
+ Allows the business organization to study about the behavior of different groups.
+ Developed using the unsupervised machine learning model clustering in Google Colab IDE.
+Movie Recommendation System || LINK
+ Recommends movies to the user similar to the ones they've watched.
+ Developed using the technique cosine similarity in Google Colab IDE.
+CERTIFICATIONS
+Data Science (Udemy) || LINK March 2024 – June 2024
+ Acquired proficiency in data analysis using Python, including data cleaning, manipulation, and visualization.
+ Studied machine learning techniques such as regression, classification and clustering.
+Data Structures and Algorithms Using Java (NPTEL) || LINK July 2023 – October 2023
+ Explored data structures like arrays, linked lists, stack, queues, trees, & graphs, focusing on implementation in Java.
+ Understood the importance of choosing appropriate data structures for different problems to optimize performance.
+ACTIVITIES AND ACHIEVEMENTS
+- AIR 60 in IPU CET entrance exam
+- Participated in Smart India Hackathon as the team leader
+- Solved over 200 problems on LeetCode
+- Represented my college football team as the captain on national level and school football team on state level
+- Volunteered in different societies (Entrepreneurship Cell, National Service Scheme, Computer Society of India) within
+various departments (PR and Outreach, Events, Content and Media)

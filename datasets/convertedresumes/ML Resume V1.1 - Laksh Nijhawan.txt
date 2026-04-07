@@ -1,0 +1,43 @@
+Laksh Nijhawan
++91 70423-06233
+Portfolio • CodePersona • LinkedIn • GitHub • Email
+Technical Skills
+Programming Languages Python, C/C++, Java
+Data Science & Machine Learning Pandas, NumPy, scikit-learn, TensorFlow, Keras, XGBoost
+Data Visualization Matplotlib, Seaborn, Tableau
+Tools & Platforms Jupyter, Google Colab, Kaggle, Git, GitHub, AWS, Streamlit
+Databases MongoDB, SQLite
+Development MERN, Redux, HTML, CSS, Tailwind CSS, GSAP
+Projects
+• Clinical Notes Classifier (Link) - PyTorch, Hugging Face Transformers, scikit-learn, Pandas, NumPy
+– Fine-tunedBio ClinicalBERTformulti-class classificationofclinicalnotesacross22 medical categories,
+achieving 73% weighted F1-score and 60% accuracy.
+– Built PyTorch data pipelines, optimized HuggingFace tokenization, and evaluated using macro F1 and
+confusion matrix analysis.
+• ECG Arrhythmia Detection (Link) - Deep CNN, TensorFlow, Keras, scikit-learn, Pandas, NumPy
+– Achieved 99% training accuracy and 98.5% validation accuracy using a deep CNN over 20 epochs.
+– Validated results using detailed classification reports and confusion matrices across arrhythmia classes.
+• SpaceX Falcon Landing Analysis (Link) - Seaborn, Lifelines, Folium, Pandas, Matplotlib
+– Analyzed 200+ Falcon 9 missions using survival analysis, Kaplan–Meier curves, and geospatial map-
+ping with live SpaceX API data.
+– Builtarule-based landing estimatorandinteractivemapstovisualizebooster reuse patternsandlanding
+outcomes.
+Achievements
+• BuiltandlaunchedCodePersona,adeveloperprofilingplatformthatconvertsaGitHubusernameintoashareable
+live portfolio + downloadable PDF, reaching 1,274+ unique users, 2800+ page views, across 78 countries
+within 3 weeks.
+• Selected for the McKinsey.org Forward Program 2025, a global initiative by McKinsey & Company focused
+on leadership, problem-solving, and digital collaboration.
+Certifications
+Google – Data Analytics: Excel, Tableau, Kaggle, BigQuery with real-world datasets.
+Infosys – Artificial Intelligence: AI fundamentals, machine learning, deep learning.
+Experience
+• IAmMaturity Aug 2025 – Oct 2025
+Front End Web Developer Intern Remote
+– Engineered scalable frontend architectures and production-grade UIs with seamless backend integration.
+• WriteCream Jan 2025 – Apr 2025
+Full Stack Web Developer Intern Remote
+– Delivered a production-ready web application with clean UI and AI integration for scalable full-stack solutions.
+Education
+• Guru Gobind Singh Indraprastha University, New Delhi July 2023 – July 2027
+B.Tech in Artificial Intelligence and Data Science CGPA: 8.75

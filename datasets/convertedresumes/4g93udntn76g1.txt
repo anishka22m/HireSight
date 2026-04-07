@@ -1,0 +1,65 @@
+EDUCATION
+Nagpur University (RTMNU) Nagpur, Maharashtra
+Bachelor of Science in Computer Science 2021 ~ 2024
+Maharashtra State Board Nagpur, Maharashtra
+Higher Secondary Certificate (HSC), Science Stream 2019 - 2021
+
+TECHNICAL SKILLS
+
+Programming Languages: Python
+
+Data & Databases: PostgreSQL, SQL Queries, Pandas, CSV, JSON, Database Design, CRUD Operations
+Tools: VS Code, PyCharm, GitHub
+
+Frameworks /Libraries: psycopg2, Tkinter, requests, smtplib, hashlib
+
+Core Concepts: OOP, Data Structures, File Handling, Error Handling, API Integration
+
+PROJECTS
+
+ATM Banking System | Python, PostgreSQL, PBKDF2, CSV | GitHub 2025
+
++ Built a working ATM banking system using Python and PostgreSQL, handling account creation, deposits,
+withdrawals, transfers, and secure login.
+
++ Implemented safe PIN storage using PBKDF2-HMAC-SHA256 with salt and supported two login methods:
+Account-+PIN and Card+CVV+PIN.
+
++ Designed a clean database structure with separate tables for accounts and transactions, and used row-level locking
+to ensure balance updates happen correctly even during simultaneous operations.
+
++ Organized the project using OOP and kept the code modular, separating database functions, PIN-hashing utilities,
+and the main ATM logic for better readability and maintenance.
+
+Fitness Tracker Application | Python, OOP, Thinter, Pandas, CSV 2025
+
+* Built a GUI-based fitness tracking app with multi-user authentication and isolated workout data for each user.
++ Implemented automatic calorie calculation, data validation, and Pandas-based CSV logging for structured record
+
+management.
++ Developed analytics features including weekly summaries and aggregated calorie insights to support data-driven
+interpretation.
++ Integrated robust exception handling to maintain data integrity and system stability during concurrent user
+operations.
+Daily Quote Emailer | Python, REST APIs, SMTP, CSV | GitHub 2025
+
+Integrated ZenQuotes REST API with error handling and timeout management to automate daily motivational
+quote retrieval.
+
+Logged each quote into CSV with date, weekday, and author details for consistent, audit-friendly historical
+tracking.
+
+Implemented secure email notifications via Gmail SMTP using environment variables (.env) for encrypted
+credential handling.
+
+Designed modular workflow (fetch + validate —> log — notify) to enhance maintainability, clarity, and alignment
+with SOP-based automation practices.
+
+CERTIFICATIONS
+
+100 Days of Code: Python Pro Bootcamp — Udemy (2025)
+
+ADDITIONAL INFORMATION
+
+Languages: English, Hindi, Marathi
+Interests: Data Analysis, Python Development

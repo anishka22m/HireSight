@@ -1,0 +1,138 @@
+AHAD ABBAS RIZVI
+S C H O L A R @ S A P
+PROFILE
+I am a dedicated and ambitious Scholar@SAP based in Bangalore, currently
+pursuing my Master’s in Software Engineering. With a strong commitment to
+both academic excellence and professional development, I bring an
+CONTACT optimistic, determined, and growth-oriented mindset to every endeavor.
+I consider myself both a leader and learning—driven to continuously
++91 7428061682
+enhance my technical capabilities while fostering collaboration and
+ahadrizvi0944@gmail.com innovation. In addition to my technical pursuits, I have hands-on experience
+ahad.abbas.rizvi@sap.com in social media management, event coordination, and volunteering. These
+roles have strengthened my communication skills and reinforced my ability
+Bengaluru, Karnataka
+to thrive in team-oriented environments.
+www.linkedin.com/in/syed-
+ahad-rizvi
+I look forward to leveraging my diverse skill set and contributing meaningfully
+to the success of the organization.
+SKILLS
+WORK EXPERIENCE
+• Programming Languages:
+ABAP, Python, C, C++, Java
+• Web Technologies:
+Scholar@SAP, 2nd Practical Phase
+ESF2 Framework, HTML,
+SCM APM team MAY 2025- DECEMBER 2025
+Springboot, Bootstrap, UI
+Worked with Java in the Cloud Application Programming (CAP)
+Designer, OWL Creation
+model, implementing backend service logic, entity handling, and SAP
+• Frameworks & Development
+BTP integrations.
+Practices: Developed CAP applications end to end, including CDS data
+Agile Framework, Pair modeling, service implementation, and deployment.
+Designed and executed automated API test cases using Mocha and
+Programming, Test-Driven
+Chai to validate service endpoints and ensure reliability.
+Development (TDD), Code Gained in-depth understanding of Risk and Criticality (RC) concepts
+Reviews and their role in compliance and system processes.
+Analyzed RC assessment templates, including their hierarchical
+• Database Management:
+structure and usage in risk evaluation workflows.
+MySQL
+Worked with SAP HANA data flow, understanding table structures and
+• Software & Tools: application deployment in the Cloud Foundry environment.
+Exposed and validated SAC views on the Eiot tenant to support
+MS Excel, Canva, Google
+analytics requirements.
+Analytics
+Developed strong understanding of Cloud Foundry deployment
+• Concepts: workflows, including multitenancy architecture, provider–subscriber
+Data Structures & Algorithms, separation, service instances, HDI containers, bindings, and privilege
+management within SAP BTP.
+Business Object (BO) Creation
+• Problem-Solving & Scholar@SAP, 1st Practical Phase
+Debugging: CLM AM notifications team SEPTEMBER 2024- APRIL 2025
+Resolving system Contributed to the development of the Notifications application within
+inconsistencies, screen cache the Service Provider Cockpit (SPC), a platform used to deliver timely
+email communications to customers during planned and unplanned
+issues, Mocha-Chai API tests
+downtimes.
+Developed multiple UI features and implemented validations
+according to stakeholder requirements to enhance the user
+experience and streamline processes.
+EDUCATION Improved and implemented UI screens using the ESF2 framework via
+oberon UI Designer, ensuring customers receive timely notifications
+during downtimes.
+Masters in Software Engineering
+Implemented feature toggles to manage half-completed
+BITS PILANI
+developments effectively.
+2024-Present
+Gained in-depth knowledge of key applications within SPC, including
+Semester 1 CGPA on 10 point
+Customer Notifications, Board & Field Notifications, IOC Master
+scale: 8.5
+Event, and Communicated Availability.
+Contributed to the development and maintenance of new features
+Maharaja Surajmal Institute,
+while supporting existing functionalities.
+New Delhi
+Strengthened expertise in UI Designer, OWL Creation, BO Creation,
+BACHELORS IN COMPUTER
+and ABAP to efficiently handle development tasks.
+APPLICATION Led the implementation and stakeholder demonstration of backlog
+2021 - 2024 enhancements, ensuring clarity and business impact.
+Secured 9.12 CGPA Enhanced problem-solving and debugging skills by addressing
+complex notification-related issues and system improvements.
+BR Ambedkar School of
+Exposys JULY 2023- AUGUST 2023
+Specialised Excellence, NEW
+Data Sciences - Intern
+DELHI
+Proficiently utilized Python for Data Sciences tasks throughout the
+2019 - 2021
+internship.
+Secured 90.6% in 10+2, Non
+Conducted in-depth analysis to outline the process of building a
+Medical Sciences
+Machine Learning (ML) model that predicts the profit value of a
+company based on its R&D Spend, Administration Cost, and
+Arwachin International School, Marketing Spend.
+New Delhi
+PROJECTS
+School
+2007 - 2019
+Secured 93.6% in 10th MoodSync:-
+A music therapy project where the program analyses the
+mood and emotions of the user to give relevant playlists for
+SOFT SKILLS music therapy
+Wellness Wizard:-
+Communication
+Management A health and wellness project that includes features such as
+mental wellness wizard, exercise correction, water and calorie
+Leadership
+tracker etc.
+Team Co-ordination
+Adaptability EXTRA CURRICULARS
+Presentation
+VT Project – Scholar What’SAP Newsletter
+Contributed as part of the core team for content creation and
+editorial.
+Scholympics – Foosball
+Participated in the SAP Scholympics; played in the foosball
+event.
+Core Member, Tark MSIT (Literary Club)
+Engaged in organizing literary events, discussions, and writing
+initiatives.
+Creative Department Member, NSS MSIT
+Designed creative content and supported social outreach
+campaigns.
+Events Management Department, E-Cell MSIT
+Coordinated logistics and planning for entrepreneurship-
+related events.
+PR Representative, Prakrati MSIT (Eco Club)
+Handled communications, outreach, and promotion of
+sustainability initiatives.
