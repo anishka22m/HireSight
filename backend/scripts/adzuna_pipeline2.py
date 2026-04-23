@@ -7,9 +7,17 @@ from models import Job
 # =========================
 # CONFIG
 # =========================
+import os
+from dotenv import load_dotenv
 
-APP_ID = "f9e7aa2a"
-APP_KEY = "b950747941f707dd9027083b425d8e79"
+# Tell Python to find and load your specific file
+# If the file is in the same folder as this script:
+load_dotenv("keys.env") 
+
+# Now pull the values into your script
+APP_ID = os.getenv("API_ID")
+APP_KEY = os.getenv("APP_KEY")
+
 
 BASE_URL = "https://api.adzuna.com/v1/api/jobs/in/search"
 

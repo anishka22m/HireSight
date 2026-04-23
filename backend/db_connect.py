@@ -1,9 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import os 
+from dotenv import load_dotenv
+
 
 # CHANGE PASSWORD HERE
-DATABASE_URL = "postgresql://postgres:anishka@localhost:5432/hiresight"
-
+load_dotenv("keys.env")
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 
 Session = sessionmaker(bind=engine)
