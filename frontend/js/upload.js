@@ -132,7 +132,29 @@ async function startAnalysis() {
 
     if (!response.ok) throw new Error("Server error");
 
-    const result = await response.json();
+    try {
+  const response = await fetch("/api/analyze", {
+    method: "POST",
+    body: formData
+  });
+
+  const result = await response.json();
+
+  // ✅ HANDLE BACKEND ERROR
+  if (!response.ok || result.error) {
+    showError(result.error || "Invalid resume uploaded.");
+    return;
+  }
+
+  // Save result
+  localStorage.setItem("analysisResult", JSON.stringify(result));
+
+  window.location.href = "/results";
+
+} catch (error) {
+  console.error("Analysis failed:", error);
+  showError("Analysis failed. Please try again.");
+}
     
     // Save to localStorage so results.html can read it
     localStorage.setItem("analysisResult", JSON.stringify(result));

@@ -122,6 +122,23 @@ def resources_page():
 # --------------------------------------------------
 # Resume Analysis API
 # --------------------------------------------------
+def validate_resume(text: str):
+    if not text or len(text.strip()) < 100:
+        return "Resume content is too short or empty."
+
+    text_lower = text.lower()
+
+    resume_keywords = [
+        "education", "experience", "skills",
+        "projects", "internship", "work experience"
+    ]
+
+    match_count = sum(1 for k in resume_keywords if k in text_lower)
+
+    if match_count < 2:
+        return "Uploaded file does not appear to be a valid resume."
+
+    return None
 
 @app.post("/api/analyze")
 async def analyze_resume_endpoint(file: UploadFile = File(...)):
@@ -137,6 +154,17 @@ async def analyze_resume_endpoint(file: UploadFile = File(...)):
         # 2. Run your SVM + Skill Match logic
         # This function is imported from resume_analyzer.py
         result = get_resume_score(file_path)
+        # You need access to raw text → modify your analyzer if needed
+        resume_text = result.get("raw_text", "")
+
+        # VALIDATION
+        error = validate_resume(resume_text)
+
+        if error:
+            return JSONResponse(
+                content={"error": error},
+                status_code=400
+            )
 
         # 3. Format data for the specific frontend JS (results.js)
         matched = [{"name": s.title(), "level": 90} for s in result["matched_skills"]]

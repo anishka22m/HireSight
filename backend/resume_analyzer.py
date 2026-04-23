@@ -206,6 +206,7 @@ def get_resume_score(pdf_path):
     improvement_tips = generate_suggestions(missing_skills)
     
     return {
+        "raw_text": raw_text,
         "category": predicted_class,
         "score": round(final_score, 2),
         "matched_skills": list(matched_skills),
