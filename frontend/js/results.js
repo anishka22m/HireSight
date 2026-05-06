@@ -12,14 +12,17 @@
     return;
   }
 
-  /* ── NEW: Update Header & Mini Stats ────────────────────── */
+  /* ── NEW: Update Header & Mini Stats ───   ─────────────────── */
   function updateHeaderStats() {
     // 1. Update Role Badge and Descriptions
     const roleBadge = document.getElementById('roleBadge');
     const scoreDesc = document.getElementById('scoreDescription');
     
     if (roleBadge) roleBadge.textContent = data.role;
-    if (scoreDesc) scoreDesc.textContent = `Your resume is highly competitive for ${data.role} roles.`;
+    // Use the dynamic suggestion from the backend
+  if (scoreDesc) {
+    scoreDesc.textContent = data.improvement_suggestion || `Your resume is competitive for ${data.role} roles.`;
+  }
 
     // 2. Update Mini Stat Numbers
     const matchedCountEl = document.getElementById('matchedCount');

@@ -1,198 +1,169 @@
 /* ============================================================
-   HireSight — Charts JS (Chart.js powered)
+   HireSight — Dynamic Charts JS
    ============================================================ */
 
 (function () {
-  const BLUE  = '#3B82F6';
-  const NAVY  = '#1E3A8A';
-  const SKY   = '#60A5FA';
+  const BLUE = '#3B82F6';
+  const NAVY = '#1E3A8A';
+  const SKY = '#60A5FA';
   const LIGHT = '#BFDBFE';
-  const SURFACE = '#F1F5F9';
 
-  /* ── Default chart options ───────────────────────────────── */
-  const defaultFont = { family: "'DM Sans', sans-serif", size: 13 };
-  Chart.defaults.font = defaultFont;
-  Chart.defaults.color = '#64748B';
-  Chart.defaults.plugins.legend.labels.boxWidth = 12;
-  Chart.defaults.plugins.legend.labels.padding = 16;
-  Chart.defaults.plugins.tooltip.padding = 10;
-  Chart.defaults.plugins.tooltip.cornerRadius = 8;
-  Chart.defaults.plugins.tooltip.backgroundColor = '#1E3A8A';
-  Chart.defaults.plugins.tooltip.titleFont = { ...defaultFont, weight: '700' };
-
-  /* ── Data ────────────────────────────────────────────────── */
-  const barData = {
-    labels: ['Python', 'SQL', 'Power BI', 'Tableau', 'Machine Learning', 'Excel', 'R', 'Spark', 'Pandas', 'TensorFlow'],
-    values: [88, 82, 76, 74, 69, 65, 58, 54, 51, 47],
+  // Keep track of chart instances to destroy them before re-render
+  let charts = {
+    bar: null,
+    pie: null,
+    line: null
   };
 
-  const pieData = {
-    labels: ['Data Engineering', 'Analytics', 'Machine Learning', 'Visualization', 'Statistics', 'Other'],
-    values: [28, 24, 19, 14, 10, 5],
-  };
+  /* -- API Data Fetching -- */
+async function loadDashboardData(role = "All Roles") {
+  try {
+    const response = await fetch(`/api/trends?role=${encodeURIComponent(role)}`);
+    const data = await response.json();
 
-  const trendMonths = ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
-  const trendData = {
-    labels: trendMonths,
-    datasets: [
-      { label: 'Python',   data: [72, 75, 78, 81, 85, 88], borderColor: BLUE,   backgroundColor: 'rgba(59,130,246,.1)',  tension: .4, fill: true },
-      { label: 'Tableau',  data: [60, 63, 65, 69, 71, 74], borderColor: '#10B981', backgroundColor: 'rgba(16,185,129,.08)', tension: .4, fill: true },
-      { label: 'Power BI', data: [55, 58, 62, 67, 73, 76], borderColor: '#F59E0B', backgroundColor: 'rgba(245,158,11,.08)', tension: .4, fill: true },
-    ]
-  };
+    updateMiniStats(data.stats);
+    renderBarChart(data.top_skills);
+    renderPieChart(data.categories);
+    renderTrendChart(data.trend_months, data.trends);
+    
+    // CALL THE NEW FUNCTION HERE
+    renderEmergingSkills(data.emerging_list); 
+    
+  } catch (error) {
+    console.error("Error loading market intelligence:", error);
+  }
+}
+  /* -- UI Update: Mini Stats -- */
+  function updateMiniStats(stats) {
+    document.getElementById('statSkillsTracked').textContent = stats.skills_tracked.toLocaleString();
+    document.getElementById('statJobsAnalyzed').textContent = stats.total_jobs.toLocaleString();
+    document.getElementById('statEmergingCount').textContent = stats.emerging_skills;
+  }
 
-  /* ── Bar Chart — Top Skills ──────────────────────────────── */
-  function initBarChart() {
+  /* -- Chart 1: Top Skills (Bar) -- */
+  function renderBarChart(skills) {
     const ctx = document.getElementById('barChart');
     if (!ctx) return;
-    new Chart(ctx, {
+    if (charts.bar) charts.bar.destroy();
+
+    charts.bar = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: barData.labels,
+        labels: skills.map(s => s.name),
         datasets: [{
-          label: 'Demand Score',
-          data: barData.values,
-          backgroundColor: barData.values.map((_, i) =>
-            i < 3 ? `rgba(30,58,138,${.85 - i * .12})` : `rgba(59,130,246,${.8 - i * .06})`),
+          label: 'Demand %',
+          data: skills.map(s => s.demand),
+          backgroundColor: BLUE,
           borderRadius: 6,
-          borderSkipped: false,
         }]
       },
       options: {
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
-        indexAxis: 'y',
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` Demand Score: ${ctx.raw}/100`
-            }
-          }
-        },
-        scales: {
-          x: {
-            max: 100,
-            grid: { color: 'rgba(226,232,240,.6)' },
-            ticks: { callback: v => v + '%' }
-          },
-          y: {
-            grid: { display: false },
-          }
-        },
-        animation: {
-          duration: 1000,
-          easing: 'easeOutQuart',
-        }
+        plugins: { legend: { display: false } }
       }
     });
   }
 
-  /* ── Pie/Doughnut Chart — Skill Categories ───────────────── */
-  function initPieChart() {
+  /* -- Chart 2: Categories (Doughnut) -- */
+  function renderPieChart(categories) {
     const ctx = document.getElementById('pieChart');
     if (!ctx) return;
-    new Chart(ctx, {
+    if (charts.pie) charts.pie.destroy();
+
+    charts.pie = new Chart(ctx, {
       type: 'doughnut',
       data: {
-        labels: pieData.labels,
+        labels: categories.map(c => c.label),
         datasets: [{
-          data: pieData.values,
-          backgroundColor: [NAVY, BLUE, SKY, LIGHT, '#93C5FD', '#DBEAFE'],
-          borderWidth: 0,
-          hoverOffset: 8,
+          data: categories.map(c => c.value),
+          backgroundColor: [NAVY, BLUE, SKY, LIGHT, '#94A3B8'],
+          borderWidth: 0
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '65%',
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { padding: 14, usePointStyle: true, pointStyleWidth: 10 }
-          },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` ${ctx.label}: ${ctx.raw}%`
-            }
-          }
-        },
-        animation: { duration: 1000, easing: 'easeOutQuart' }
+        cutout: '70%',
+        plugins: { legend: { position: 'bottom' } }
       }
     });
   }
 
-  /* ── Line Chart — Skill Trends ───────────────────────────── */
-  function initTrendChart() {
+  /* -- Chart 3: Trends (Line) -- */
+  function renderTrendChart(months, trendData) {
     const ctx = document.getElementById('trendChart');
     if (!ctx) return;
-    new Chart(ctx, {
+    if (charts.line) charts.line.destroy();
+
+    const colors = [BLUE, '#10B981', '#F59E0B'];
+
+    charts.line = new Chart(ctx, {
       type: 'line',
-      data: trendData,
+      data: {
+        labels: months,
+        datasets: trendData.map((t, i) => ({
+          label: t.skill,
+          data: t.values,
+          borderColor: colors[i % colors.length],
+          tension: 0.4,
+          fill: false
+        }))
+      },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { position: 'top' },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%`
-            }
-          }
-        },
-        scales: {
-          x: {
-            grid: { color: 'rgba(226,232,240,.5)' },
-          },
-          y: {
-            min: 40,
-            max: 100,
-            grid: { color: 'rgba(226,232,240,.5)' },
-            ticks: { callback: v => v + '%' }
-          }
-        },
-        elements: {
-          point: { radius: 4, hoverRadius: 7, borderWidth: 2 }
-        },
-        animation: { duration: 1200, easing: 'easeOutQuart' }
+        scales: { y: { beginAtZero: false, ticks: { callback: v => v + '%' } } }
       }
     });
   }
 
-  /* ── Emerging skills ticker ──────────────────────────────── */
-  function initEmergingSkills() {
-    const container = document.getElementById('emergingSkillsList');
-    if (!container) return;
-    const skills = [
-      { name: 'LLM Fine-tuning', growth: '+142%', badge: 'badge-blue' },
-      { name: 'dbt (Data Build Tool)', growth: '+98%', badge: 'badge-green' },
-      { name: 'Vector Databases', growth: '+87%', badge: 'badge-blue' },
-      { name: 'Polars', growth: '+76%', badge: 'badge-green' },
-      { name: 'DuckDB', growth: '+65%', badge: 'badge-blue' },
-      { name: 'Prompt Engineering', growth: '+120%', badge: 'badge-amber' },
-    ];
-    skills.forEach(({ name, growth, badge }, i) => {
-      const el = document.createElement('div');
-      el.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;background:white;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.55rem;animation:fadeUp .5s both;animation-delay:' + (i * .07) + 's;transition:all .22s;cursor:default;';
-      el.innerHTML = `
-        <div style="display:flex;align-items:center;gap:.65rem;">
-          <span style="font-weight:700;color:var(--muted);font-size:.78rem;width:18px;text-align:center;">${i + 1}</span>
-          <span style="font-size:.9rem;font-weight:600;color:var(--text);">${name}</span>
-        </div>
-        <span class="badge ${badge}" style="font-size:.78rem;">↑ ${growth}</span>`;
-      el.addEventListener('mouseenter', () => { el.style.borderColor = 'rgba(59,130,246,.3)'; el.style.transform = 'translateX(3px)'; });
-      el.addEventListener('mouseleave', () => { el.style.borderColor = 'var(--border)'; el.style.transform = ''; });
-      container.appendChild(el);
+  /* -- Filter Interaction -- */
+  function initFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // UI Visual Update
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Fetch new data based on role
+        const selectedRole = btn.getAttribute('data-role');
+        loadDashboardData(selectedRole);
+      });
     });
   }
+  // 1. Add this function to build the list items
+function renderEmergingSkills(skills) {
+  const container = document.getElementById('emergingSkillsList');
+  if (!container) return;
+  
+  container.innerHTML = ''; // Clear previous list
 
-  /* ── Init ────────────────────────────────────────────────── */
+  skills.forEach((skill, i) => {
+    const el = document.createElement('div');
+    el.style.cssText = `
+      display:flex; align-items:center; justify-content:space-between; 
+      padding:.85rem 1rem; background:white; border:1px solid var(--border); 
+      border-radius:var(--radius); margin-bottom:.55rem; 
+      animation:fadeUp .5s both; animation-delay:${i * .07}s;
+    `;
+    
+    el.innerHTML = `
+      <div style="display:flex; align-items:center; gap:.65rem;">
+        <span style="font-weight:700; color:var(--muted); font-size:.78rem; width:18px;">${i + 1}</span>
+        <span style="font-size:.9rem; font-weight:600; color:var(--text);">${skill.name}</span>
+      </div>
+      <span class="badge badge-green" style="font-size:.78rem;">↑ ${skill.growth}</span>
+    `;
+    container.appendChild(el);
+  });
+}
+
+  /* -- Init -- */
   document.addEventListener('DOMContentLoaded', () => {
-    initBarChart();
-    initPieChart();
-    initTrendChart();
-    initEmergingSkills();
+    loadDashboardData(); // Initial load for All Roles
+    initFilters();``
   });
 })();

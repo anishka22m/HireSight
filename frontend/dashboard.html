@@ -108,6 +108,19 @@
     .industry-bar-wrap { flex: 1; }
     .industry-pct { font-size: .82rem; color: var(--muted); width: 36px; text-align: right; }
 
+    /* Add this inside the <style> tag in dashboard.html */
+    .container {
+      max-width: 1400px; /* Constrains the width on big monitors */
+      margin: 0 auto;    /* Centers the dashboard */
+      padding: 0 2rem;   /* Adds breathing room on the sides */
+      width: 100%;
+    }
+
+    /* Ensure the cards don't get too flat/stretched */
+    .stat-strip-card {
+      min-height: 100px;
+    }
+
     @media (max-width: 960px) {
       .stat-strip { grid-template-columns: repeat(2, 1fr); }
       .chart-grid { grid-template-columns: 1fr; }
@@ -151,14 +164,16 @@
     <div class="dashboard-header-row anim-fade-up">
       <div>
         <h2 style="font-size:1.2rem;margin-bottom:.3rem;">Market Overview</h2>
-        <p style="font-size:.85rem;">Updated Feb 2026 · Data Roles</p>
+        <p style="font-size:.85rem;">Updated May 2026 · Data Roles</p>
       </div>
-      <div class="dashboard-filters">
-        <button class="filter-btn active">All Roles</button>
-        <button class="filter-btn">Data Analyst</button>
-        <button class="filter-btn">Data Engineer</button>
-        <button class="filter-btn">ML Engineer</button>
-        <button class="filter-btn">Last 6 Months</button>
+      <div class="dashboard-filters" id="roleFilters">
+        <button class="filter-btn active" data-role="All Roles">All Roles</button>
+        <button class="filter-btn" data-role="Data Science/Analytics">Data Science</button>
+        <button class="filter-btn" data-role="Engineering">Engineering</button>
+        <button class="filter-btn" data-role="Design">Design</button>
+        <button class="filter-btn" data-role="Marketing">Marketing</button>
+        <button class="filter-btn" data-role="Finance/Ops">Finance</button>
+      </div>
       </div>
     </div>
 
@@ -167,28 +182,28 @@
       <div class="card stat-strip-card">
         <div class="stat-strip-icon" style="background:rgba(59,130,246,.1);">📊</div>
         <div>
-          <div class="stat-strip-num">1,247</div>
+          <div class="stat-strip-num" id="statSkillsTracked">0</div>
           <div class="stat-strip-lbl">Skills tracked</div>
         </div>
       </div>
       <div class="card stat-strip-card">
         <div class="stat-strip-icon" style="background:rgba(16,185,129,.1);">📈</div>
         <div>
-          <div class="stat-strip-num">+18%</div>
-          <div class="stat-strip-lbl">Python demand MoM</div>
+          <div class="stat-strip-num" id="statGrowth">+12%</div>
+          <div class="stat-strip-lbl">Avg. Demand Growth</div>
         </div>
       </div>
       <div class="card stat-strip-card">
         <div class="stat-strip-icon" style="background:rgba(245,158,11,.1);">⚡</div>
         <div>
-          <div class="stat-strip-num">142</div>
+          <div class="stat-strip-num" id="statEmergingCount">0</div>
           <div class="stat-strip-lbl">Emerging skills</div>
         </div>
       </div>
       <div class="card stat-strip-card">
         <div class="stat-strip-icon" style="background:rgba(30,58,138,.1);">🏢</div>
         <div>
-          <div class="stat-strip-num">50K+</div>
+          <div class="stat-strip-num" id="statJobsAnalyzed">0</div>
           <div class="stat-strip-lbl">Job postings analyzed</div>
         </div>
       </div>
