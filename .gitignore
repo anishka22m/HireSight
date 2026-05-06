@@ -1,2 +1,18 @@
 keys.env
 .txt
+# Python cache
+__pycache__/
+*.pyc
+
+# Temp files
+temp/
+r/
+
+# Model files
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset converted resumes
+datasets/convertedresumes/
