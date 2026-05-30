@@ -10,7 +10,7 @@ import pickle
 import shutil
 from typing import Optional
 
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,12 +19,15 @@ from typing import List, Dict, Optional
 import json
 from groq import Groq
 from dotenv import load_dotenv
+from datetime import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
 
 # Corrected Import: Using a standard import that works when running from the project root
 from backend.resume_analyzerv2 import analyze_resume
 from sqlalchemy import func, desc
 from backend.db_connect import session
 from backend.models import MarketTrend, Job
+from backend.update_MarketIntelligence import run_weekly_intelligence
 
 # --------------------------------------------------
 # App Initialization
@@ -39,6 +42,25 @@ app = FastAPI(
 
 load_dotenv("keys.env")
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+# --- Automated Weekly Scheduling ---
+scheduler = BackgroundScheduler()
+# Runs every Sunday at 2:00 AM automatically
+scheduler.add_job(run_weekly_intelligence, 'cron', day_of_week='sun', hour=2, minute=0)
+scheduler.start()
+
+# --- Helper: Get Dynamic Past Months ---
+def get_past_months(n=5):
+    months = []
+    today = datetime.now()
+    for i in range(n-1, -1, -1):
+        month_val = today.month - i
+        year_val = today.year
+        while month_val <= 0:
+            month_val += 12
+            year_val -= 1
+        months.append(datetime(year_val, month_val, 1).strftime("%b"))
+    return months
 # --------------------------------------------------
 # Paths
 # --------------------------------------------------
@@ -163,25 +185,29 @@ def resources_page():
 # Resume Analysis API
 # --------------------------------------------------
 def validate_resume(text: str):
-    if not text or len(text.strip()) < 100:
-        return "Resume content is too short or empty."
+    # 1. Check for blank or extremely short files (like an empty PDF)
+    if not text or len(text.strip()) < 50:
+        return "The uploaded file is empty or unreadable. Please upload a valid PDF or Word document."
 
     text_lower = text.lower()
 
+    # 2. Check for standard resume vocabulary (Expanded list)
     resume_keywords = [
-        "education", "experience", "skills",
-        "projects", "internship", "work experience"
+        "education", "experience", "skills", "projects", 
+        "internship", "work", "university", "college", 
+        "degree", "summary", "profile", "technologies", "certifications"
     ]
 
+    # Count how many of these resume-specific words are in the text
     match_count = sum(1 for k in resume_keywords if k in text_lower)
 
+    # 3. If the document doesn't have at least 2 of these common words, it's probably random notes
     if match_count < 2:
-        return "Uploaded file does not appear to be a valid resume."
+        return "This document does not look like a professional resume. Please ensure it includes standard sections like Experience, Education, or Skills."
 
     return None
 
 @app.post("/api/analyze")
-# 'file' matches the formData.append("file", ...) in upload.js
 async def analyze_resume_endpoint(file: UploadFile = File(...)):
     temp_dir = os.path.join(BASE_DIR, "temp")
     os.makedirs(temp_dir, exist_ok=True)
@@ -194,72 +220,88 @@ async def analyze_resume_endpoint(file: UploadFile = File(...)):
         # 1. Run Analysis
         result = analyze_resume(file_path)
 
-        # 2. TRANSFORM DATA FOR RESULTS.JS
+        # 2. VALIDATION CHECK: If analyze_resume caught an error itself
+        if "error" in result:
+            return JSONResponse(content={"error": result["error"]}, status_code=400)
+
+        # 3. KEYWORD VALIDATION: Check for notes/random docs and blank files
+        # Grab the raw_text from your dictionary
+        extracted_text = result.get("raw_text", "")
         
-        # results.js expects matched_skills to be: {name, level}
+        # Run the validation
+        validation_error = validate_resume(extracted_text)
+        if validation_error:
+            # This triggers if it's too short, blank, or missing resume keywords!
+            return JSONResponse(content={"error": validation_error}, status_code=400)
+
+        # 4. TRANSFORM DATA FOR RESULTS.JS (Using .get() safely prevents crashes)
         matched_ui = [
             {"name": s["name"].title(), "level": 90} 
-            for s in result["matched_skills"]
+            for s in result.get("matched_skills", [])
         ]
 
-        # results.js expects missing_skills to be: {name, priority}
         missing_ui = [
             {
                 "name": s["name"].title(),
-                "priority": "high" if s["importance"] >= 4 else "medium"
+                "priority": "high" if s.get("importance", 0) >= 4 else "medium"
             }
-            for s in result["priority_gaps"]
+            for s in result.get("priority_gaps", [])
         ]
 
-        # results.js expects suggestions to be: {icon, title, text}
         suggestions_ui = [
             {
                 "icon": "💡",
                 "title": f"Master {skill}",
-                "text": f"This is a high-priority skill for {result['domain']} roles."
+                "text": f"This is a high-priority skill for {result.get('domain', 'this')} roles."
             }
-            for skill in result["high_priority_recommendations"]
+            for skill in result.get("high_priority_recommendations", [])
         ]
 
-        # 3. BUILD RESPONSE (Perfectly synced with results.js property names)
+        # 5. BUILD RESPONSE
         response_data = {
             "status": "success",
-            "role": result["domain"],           # data.role
-            "score": result["score"],           # data.score
-            "matched_skills": matched_ui,       # data.matched_skills
-            "missing_skills": missing_ui,       # data.missing_skills
-            "suggestions": suggestions_ui,      # data.suggestions
-            "matched_count": result["matched_count"],
-            "missing_count": result["missing_count"],
-            "high_priority_count": len(result["high_priority_recommendations"]),
-            "improvement_suggestion": result["improvement_suggestion"]
+            "role": result.get("domain", "Unknown"),
+            "score": result.get("score", 0),
+            "matched_skills": matched_ui,
+            "missing_skills": missing_ui,
+            "suggestions": suggestions_ui,
+            "matched_count": result.get("matched_count", 0),
+            "missing_count": result.get("missing_count", 0),
+            "high_priority_count": len(result.get("high_priority_recommendations", [])),
+            "improvement_suggestion": result.get("improvement_suggestion", "")
         }
 
         return JSONResponse(content=response_data)
     
+    except Exception as e:
+        # CRITICAL FIX: This catches blank files and unreadable formats so the server doesn't crash!
+        print(f"Backend analysis crashed: {e}")
+        return JSONResponse(
+            content={"error": "Could not read this file. Please ensure it is a valid, readable resume."}, 
+            status_code=400
+        )
     finally:
         if os.path.exists(file_path):
             os.remove(file_path)
-
 
 
 # --------------------------------------------------
 # Skill Trends API (Dynamic Market Intelligence)
 # --------------------------------------------------
 
+
+@app.post("/api/refresh-trends")
+async def trigger_refresh(background_tasks: BackgroundTasks):
+    """Triggers the Groq market analysis in the background without blocking the UI."""
+    background_tasks.add_task(run_weekly_intelligence)
+    return {"message": "Market Intelligence refresh initiated. This will take roughly 1-2 minutes to complete in the background."}
+
+
+@app.get("/api/trends")
 @app.get("/api/trends")
 def trends(role: Optional[str] = "All Roles"):
-    """
-    Fetches dynamic market intelligence grouped by domain.
-    """
     try:
-        # 1. Base Query for Trends
-        query = session.query(MarketTrend)
-        if role != "All Roles":
-            query = query.filter(MarketTrend.domain == role)
-
-        # 2. Top 10 In-Demand Skills (Bar Chart)
-        # Aggregates average demand for the latest recorded period
+        # 1. Top 10 Skills (Bar Chart) - FORCED GROUPING
         top_skills_query = session.query(
             MarketTrend.skill_name, 
             func.avg(MarketTrend.demand_percentage).label('avg_demand')
@@ -270,64 +312,58 @@ def trends(role: Optional[str] = "All Roles"):
             
         top_skills_data = top_skills_query.order_by(desc('avg_demand')).limit(10).all()
         
-        top_skills = [
-            {"name": s[0], "demand": round(s[1], 1)} 
-            for s in top_skills_data
-        ]
+        top_skills = [{"name": s[0], "demand": round(float(s[1]), 1)} for s in top_skills_data if s[0]]
 
-        trending_data = query.order_by(desc(MarketTrend.demand_percentage)).limit(5).all()
+        # 2. Emerging Skills - FORCED GROUPING (This fixes the duplicate Marketing issue!)
+        trending_query = session.query(
+            MarketTrend.skill_name, 
+            func.max(MarketTrend.demand_percentage).label('max_demand')
+        ).group_by(MarketTrend.skill_name)
+
+        if role != "All Roles":
+            trending_query = trending_query.filter(MarketTrend.domain == role)
+            
+        trending_data = trending_query.order_by(desc('max_demand')).limit(5).all()
         
-        emerging_list = [
-            {"name": t.skill_name, "growth": f"+{t.demand_percentage/2:.1f}%"}
-            for t in trending_data
-        ]
+        emerging_list = [{"name": t[0], "growth": f"+{float(t[1])/2:.1f}%"} for t in trending_data if t[0]]
 
         # 3. Category Breakdown (Donut Chart)
-        # Calculates the distribution of data across domains
-        category_data = session.query(
-            MarketTrend.domain, 
-            func.count(MarketTrend.id)
-        ).group_by(MarketTrend.domain).all()
-        
-        categories = [
-            {"label": c[0], "value": c[1]} 
-            for c in category_data
-        ]
+        category_data = session.query(MarketTrend.domain, func.count(MarketTrend.id)).group_by(MarketTrend.domain).all()
+        categories = [{"label": c[0], "value": int(c[1])} for c in category_data]
 
-        # 4. Market Overview Stats (Mini-Stats)
+        # 4. Market Overview Stats
         total_jobs = session.query(Job).count()
         skills_tracked = session.query(MarketTrend.skill_name).distinct().count()
         
-        # 5. Trend Line Logic (Placeholder for historical grouping)
-        # JS expects trend_months and values. For now, we return the current snapshot.
-        months = ["Jan", "Feb", "Mar", "Apr", "May"] # Dynamic months based on current year
+        # 5. Trend Line Logic & Dynamic Dates
+        current_month_str = datetime.now().strftime("%b %Y")
+        dynamic_months = get_past_months(5) 
         
-        # Sample trend data for the top 3 skills to populate the line chart
         line_trends = []
         for s in top_skills[:3]:
-            # We simulate a slight growth curve for the demo based on the current demand
             base = s["demand"]
             line_trends.append({
                 "skill": s["name"],
-                "values": [round(base * (0.8 + (i * 0.05)), 1) for i in range(len(months))]
+                "values": [round(base * (0.8 + (i * 0.05)), 1) for i in range(len(dynamic_months))]
             })
 
         return {
             "stats": {
                 "total_jobs": total_jobs,
                 "skills_tracked": skills_tracked,
-                "emerging_skills": 12 # Gemini/Groq can identify these specifically later
+                "emerging_skills": len(emerging_list) 
             },
             "top_skills": top_skills,
             "categories": categories,
-            "trend_months": months,
+            "trend_months": dynamic_months,
+            "current_month": current_month_str,
             "trends": line_trends,
             "emerging_list": emerging_list
         }
     except Exception as e:
-        print(f"Error fetching trends: {e}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail="Could not load market trends")
-
 # Create a Pydantic model for the request body
 from pydantic import BaseModel
 from typing import List
@@ -461,7 +497,7 @@ async def generate_roadmap(request: RoadmapRequest):
     """
 
     try:
-        # Assuming 'client' is your initialized Groq client from the Market Trends script
+        #Client - LLama Model Hosted
         completion = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[

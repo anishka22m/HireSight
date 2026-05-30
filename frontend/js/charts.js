@@ -15,18 +15,24 @@
     line: null
   };
 
-  /* -- API Data Fetching -- */
+/* -- API Data Fetching -- */
 async function loadDashboardData(role = "All Roles") {
   try {
     const response = await fetch(`/api/trends?role=${encodeURIComponent(role)}`);
     const data = await response.json();
+
+    // Update Dynamic Dates in UI
+    const updatedTextEl = document.getElementById('uiLastUpdated');
+    const topSkillsDateEl = document.getElementById('uiTopSkillsDate');
+    
+    if(updatedTextEl) updatedTextEl.textContent = `Updated ${data.current_month} · ${role}`;
+    if(topSkillsDateEl) topSkillsDateEl.textContent = data.current_month;
 
     updateMiniStats(data.stats);
     renderBarChart(data.top_skills);
     renderPieChart(data.categories);
     renderTrendChart(data.trend_months, data.trends);
     
-    // CALL THE NEW FUNCTION HERE
     renderEmergingSkills(data.emerging_list); 
     
   } catch (error) {
@@ -121,7 +127,8 @@ async function loadDashboardData(role = "All Roles") {
 
   /* -- Filter Interaction -- */
   function initFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // Select all filter buttons EXCEPT the refresh button
+    const filterButtons = document.querySelectorAll('.dashboard-filters .filter-btn:not(#refreshDataBtn)');
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         // UI Visual Update
@@ -162,8 +169,53 @@ function renderEmergingSkills(skills) {
 }
 
   /* -- Init -- */
+/* -- Refresh Data Logic with Auto-Refresh Loader -- */
+  function initRefreshLogic() {
+    const refreshBtn = document.getElementById('refreshDataBtn');
+    if (!refreshBtn) return;
+
+    refreshBtn.addEventListener('click', async () => {
+      // Grab the loader elements
+      const loader = document.getElementById('globalLoader');
+      const loaderTitle = document.getElementById('loaderTitle');
+      const loaderDesc = document.getElementById('loaderDesc');
+
+      try {
+        // 1. Trigger the background script on the server
+        await fetch('/api/refresh-trends', { method: 'POST' });
+        
+        // 2. Show the full screen loader
+        if (loader) loader.style.display = 'flex';
+        if (loaderTitle) loaderTitle.textContent = 'Updating Market Intelligence';
+        
+        // 3. Start a 75-second countdown to allow Groq to finish processing
+        let timeLeft = 75; 
+        if (loaderDesc) loaderDesc.textContent = `Scraping live job descriptions and running Llama 3.3. Auto-refreshing in ${timeLeft}s...`;
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            if (loaderDesc) loaderDesc.textContent = `Scraping live job descriptions and running Llama 3.3. Auto-refreshing in ${timeLeft}s...`;
+            
+            // 4. When the timer hits 0, force a page reload to fetch the new database entries!
+            if(timeLeft <= 0) {
+                clearInterval(timer);
+                if (loaderDesc) loaderDesc.textContent = "Finalizing data... reloading now!";
+                window.location.reload(); 
+            }
+        }, 1000);
+
+      } catch (error) {
+        console.error("Error triggering refresh:", error);
+        if (loader) loader.style.display = 'none';
+        alert("Failed to start refresh. Please check the server logs.");
+      }
+    });
+  }
+
+  /* -- Init -- */
   document.addEventListener('DOMContentLoaded', () => {
     loadDashboardData(); // Initial load for All Roles
-    initFilters();``
+    initFilters();
+    initRefreshLogic();
   });
 })();

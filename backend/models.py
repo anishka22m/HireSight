@@ -14,6 +14,15 @@ class Job(Base):
     role = Column(Text)
     source = Column(Text)
 
+class Resume(Base):
+    __tablename__ = "resumes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    file_name = Column(String, unique=True)
+    extracted_text = Column(Text)
+    cleaned_text = Column(Text)
+    predicted_role = Column(String)
+
 class Skill(Base):
     __tablename__ = "skills"
 
@@ -27,14 +36,7 @@ class JobSkill(Base):
     skill_id = Column(Integer, ForeignKey("skills.id"), primary_key=True)
 
 
-class Resume(Base):
-    __tablename__ = "resumes"
 
-    id = Column(Integer, primary_key=True, index=True)
-    file_name = Column(String, unique=True)
-    extracted_text = Column(Text)
-    cleaned_text = Column(Text)
-    predicted_role = Column(String)
 
 class ResumeSkill(Base):
     __tablename__ = "resume_skills"

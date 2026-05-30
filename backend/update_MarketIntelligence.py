@@ -26,28 +26,34 @@ ROLE_MAP = {
 
 # 2. Groq Analysis Function
 def analyze_domain_trends(domain_name, combined_descriptions):
-    """Uses Groq and the updated Llama 3.3 model to extract skill demand."""
+    """Uses the updated Llama 3.3 model to extract skill demand safely."""
+    # CHANGED: We now explicitly ask for a JSON Object with a 'skills' array. 
+    # This prevents the Groq 400 tool_use_failed error and formats correctly.
     prompt = f"""
     Analyze these job descriptions for the '{domain_name}' domain.
     1. Identify the top 5 most frequently mentioned technical skills.
-    2. For each, provide a 'demand_percentage' (0-100) based on frequency.
+    2. STRONGLY ENFORCE GROUPING: Combine synonyms and acronyms (e.g., merge "Machine Learning" and "ML" into "Machine Learning", merge "javascript", "JS" into "JavaScript").
+    3. Ensure proper capitalization (e.g., "Node.js", "MySQL").
+    4. CRITICAL RULE: DO NOT list the domain name itself as a skill! (e.g., If the domain is 'Marketing', do NOT output 'Marketing'. Output actual skills like 'SEO', 'Google Analytics').
+    5. For each, provide a 'demand_percentage' (0-100).
     
-    Return ONLY a JSON list of objects:
-    [
-      {{"skill": "Python", "demand": 85}},
-      {{"skill": "SQL", "demand": 70}}
-    ]
+    You MUST return a JSON Object with a single key called "skills" containing a list:
+    {{
+      "skills": [
+        {{"skill": "Python", "demand": 85}},
+        {{"skill": "SQL", "demand": 70}}
+      ]
+    }}
     
     Descriptions:
     {combined_descriptions[:12000]}
     """
     
     try:
-        # Switched to llama-3.3-70b-versatile for 2026 compatibility
         completion = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[
-                {"role": "system", "content": "You are a labor market analyst. You output only raw JSON lists."},
+                {"role": "system", "content": "You are a labor market analyst. You output strictly valid JSON objects."},
                 {"role": "user", "content": prompt}
             ],
             response_format={"type": "json_object"}
@@ -55,24 +61,24 @@ def analyze_domain_trends(domain_name, combined_descriptions):
         
         raw_output = json.loads(completion.choices[0].message.content)
         
+        # Safely extract the list from the dictionary, regardless of what the LLM named the key
         if isinstance(raw_output, dict):
             for val in raw_output.values():
                 if isinstance(val, list): return val
-        return raw_output
+        return []
     except Exception as e:
         print(f"Error for {domain_name}: {e}")
         return []
 
 # 3. Main Intelligence Loop
 def run_weekly_intelligence():
-    print("Starting Market Intelligence Update via Groq...")
+    print("Starting Market Intelligence Update via Adzuna and LLama...")
     current_month = datetime.now().strftime("%b %Y")
     unique_domains = list(set(ROLE_MAP.values()))
     
     for domain in unique_domains:
         print(f"--- Processing: {domain} ---")
         
-        # Limit to 10-15 jobs per domain to stay within token limits
         recent_jobs = session.query(Job.description).filter(Job.domain == domain).limit(15).all()
         
         if not recent_jobs:
@@ -86,16 +92,34 @@ def run_weekly_intelligence():
             continue
 
         for item in trends:
+            # Bulletproof Fallback: Catch whatever keys the LLM decides to use
+            skill_name = "Unknown"
+            demand_val = 50.0
+            
+            if isinstance(item, dict):
+                skill_name = item.get('skill') or item.get('name') or item.get('technology') or "Unknown"
+                demand_val = item.get('demand') or item.get('percentage') or item.get('value') or 50.0
+            
+            clean_skill_name = str(skill_name).strip().title()
+            
+            # Skip saving if the AI failed to extract a real word
+            if clean_skill_name == "Unknown" or not clean_skill_name:
+                continue
+                
+            try:
+                demand_val = float(demand_val)
+            except:
+                demand_val = 50.0
+
             new_entry = MarketTrend(
                 domain=domain,
-                skill_name=item.get('skill'),
-                demand_percentage=item.get('demand'),
+                skill_name=clean_skill_name,
+                demand_percentage=demand_val,
                 month_year=current_month
             )
             session.add(new_entry)
         
         print(f"Successfully recorded {len(trends)} skills for {domain}.")
-        # 5 second delay to avoid Rate Limit Errors on free tier
         time.sleep(5)
 
     session.commit()

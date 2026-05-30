@@ -114,7 +114,6 @@
     analyzeBtn.classList.remove('ready');
   });
 
-  /* ── Analyze ─────────────────────────────────────────────── */
 /* ── Analyze ─────────────────────────────────────────────── */
 analyzeBtn.addEventListener('click', startAnalysis);
 
@@ -122,51 +121,43 @@ async function startAnalysis() {
   if (!selectedFile) return;
 
   const formData = new FormData();
-  formData.append("file", selectedFile); // The key "file" must match server.py
+  formData.append("file", selectedFile); 
+
+  // 1. Show the global loader before starting the fetch
+  const loader = document.getElementById('globalLoader');
+  if (loader) {
+    document.getElementById('loaderTitle').textContent = 'Analyzing Resume';
+    document.getElementById('loaderDesc').textContent = 'Extracting skills, running NLP validation, and predicting your domain...';
+    loader.style.display = 'flex';
+  }
 
   try {
+    // 2. Make the actual request
     const response = await fetch("/api/analyze", {
       method: "POST",
       body: formData
     });
 
-    if (!response.ok) throw new Error("Server error");
+    const result = await response.json();
 
-    try {
-  const response = await fetch("/api/analyze", {
-    method: "POST",
-    body: formData
-  });
+    // 3. Handle backend errors gracefully
+    if (!response.ok || result.error) {
+      if (loader) loader.style.display = 'none'; // Hide loader so they can see the error
+      showError(result.error || "Invalid resume uploaded.");
+      return;
+    }
 
-  const result = await response.json();
-
-  // ✅ HANDLE BACKEND ERROR
-  if (!response.ok || result.error) {
-    showError(result.error || "Invalid resume uploaded.");
-    return;
-  }
-
-  // Save result
-  localStorage.setItem("analysisResult", JSON.stringify(result));
-
-  window.location.href = "/results";
-
-} catch (error) {
-  console.error("Analysis failed:", error);
-  showError("Analysis failed. Please try again.");
-}
-    
-    // Save to localStorage so results.html can read it
+    // 4. Save result and redirect (Loader stays active until the new page loads)
     localStorage.setItem("analysisResult", JSON.stringify(result));
+    window.location.href = "/results";
 
-    // Redirect to the results page
-    window.location.href = "/results"; 
   } catch (error) {
+    // 5. Hide loader if the network fails
+    if (loader) loader.style.display = 'none';
     console.error("Analysis failed:", error);
     showError("Analysis failed. Please try again.");
   }
 }
-
   const stages = [
     { pct: 15, msg: 'Uploading resume…' },
     { pct: 35, msg: 'Parsing document content…' },
